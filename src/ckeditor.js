@@ -22,6 +22,7 @@ import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline.js';
 import Image from '@ckeditor/ckeditor5-image/src/image.js';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption.js';
+import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert.js';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle.js';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar.js';
@@ -74,6 +75,7 @@ Editor.builtinPlugins = [
 	HorizontalLine,
 	Image,
 	ImageCaption,
+	ImageInsert,
 	ImageResize,
 	ImageStyle,
 	ImageToolbar,
@@ -110,6 +112,7 @@ Editor.defaultConfig = {
 		items: [
 			'heading',
 			'style',
+			'fontSize',
 			'|',
 			'undo',
 			'redo',
@@ -120,7 +123,6 @@ Editor.defaultConfig = {
 			'strikethrough',
 			'fontColor',
 			'fontBackgroundColor',
-			'fontSize',
 			'highlight',
 			'removeFormat',
 			'|',
@@ -128,15 +130,16 @@ Editor.defaultConfig = {
 			'outdent',
 			'indent',
 			'|',
+			'link',
+			'imageInsert',
+			'insertTable',
+			'mediaEmbed',
+			'|',
 			'bulletedList',
 			'numberedList',
 			'todoList',
 			'|',
-			'link',
 			'blockQuote',
-			'insertTable',
-			'mediaEmbed',
-			'|',
 			'horizontalLine',
 			'subscript',
 			'superscript',
