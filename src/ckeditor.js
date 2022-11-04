@@ -15,17 +15,20 @@ import DataSchema from '@ckeditor/ckeditor5-html-support/src/dataschema.js';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials.js';
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor.js';
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
+//import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
 import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtmlsupport.js';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading.js';
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline.js';
+import HtmlEmbed from '@ckeditor/ckeditor5-html-embed/src/htmlembed.js';
 import Image from '@ckeditor/ckeditor5-image/src/image.js';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption.js';
 import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert.js';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle.js';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar.js';
+import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload.js';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent.js';
 import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock.js';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic.js';
@@ -49,125 +52,158 @@ import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperti
 import TableColumnResize from '@ckeditor/ckeditor5-table/src/tablecolumnresize.js';
 import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
+import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation.js';
 import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
+
+import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar';
+import HeadingButtonsUI from '@ckeditor/ckeditor5-heading/src/headingbuttonsui';
+import ParagraphButtonUI from '@ckeditor/ckeditor5-paragraph/src/paragraphbuttonui';
 
 class Editor extends ClassicEditor {}
 
 // Plugins to include in the build.
 Editor.builtinPlugins = [
-	Alignment,
-	Autoformat,
-	AutoImage,
-	Base64UploadAdapter,
-	BlockQuote,
-	Bold,
-	CodeBlock,
-	DataFilter,
-	DataSchema,
-	Essentials,
-	FontBackgroundColor,
-	FontColor,
-	FontSize,
-	GeneralHtmlSupport,
-	Heading,
-	Highlight,
-	HorizontalLine,
-	Image,
-	ImageCaption,
-	ImageInsert,
-	ImageResize,
-	ImageStyle,
-	ImageToolbar,
-	Indent,
-	IndentBlock,
-	Italic,
-	Link,
-	LinkImage,
-	List,
-	ListProperties,
-	MediaEmbed,
-	MediaEmbedToolbar,
-	Paragraph,
-	PasteFromOffice,
-	RemoveFormat,
-	SourceEditing,
-	Strikethrough,
-	Style,
-	Subscript,
-	Superscript,
-	Table,
-	TableCaption,
-	TableCellProperties,
-	TableColumnResize,
-	TableProperties,
-	TableToolbar,
-	TodoList,
-	Underline
+    Alignment,
+    Autoformat,
+    AutoImage,
+    Base64UploadAdapter,
+    BlockQuote,
+    Bold,
+    CodeBlock,
+    DataFilter,
+    DataSchema,
+    Essentials,
+    FontBackgroundColor,
+    FontColor,
+//    FontFamily,
+    FontSize,
+    GeneralHtmlSupport,
+    Heading,
+    Highlight,
+    HorizontalLine,
+    HtmlEmbed,
+    Image,
+    ImageCaption,
+    ImageInsert,
+    ImageResize,
+    ImageStyle,
+    ImageToolbar,
+    ImageUpload,
+    Indent,
+    IndentBlock,
+    Italic,
+    Link,
+    LinkImage,
+    List,
+    ListProperties,
+    MediaEmbed,
+    MediaEmbedToolbar,
+    Paragraph,
+    PasteFromOffice,
+    RemoveFormat,
+    SourceEditing,
+    Strikethrough,
+    Style,
+    Subscript,
+    Superscript,
+    Table,
+    TableCaption,
+    TableCellProperties,
+    TableColumnResize,
+    TableProperties,
+    TableToolbar,
+    TextTransformation,
+    TodoList,
+    Underline,
+    BlockToolbar, ParagraphButtonUI, HeadingButtonsUI,
 ];
 
 // Editor configuration.
 Editor.defaultConfig = {
-	toolbar: {
-		items: [
-			'heading',
-			'style',
-			'|',
-			'fontSize',
-			'fontColor',
-			'fontBackgroundColor',
-			'highlight',
-			'|',
-			'bold',
-			'italic',
-			'underline',
-			'strikethrough',
-			'removeFormat',
-			'|',
-			'alignment',
-			'outdent',
-			'indent',
-			'|',
-			'bulletedList',
-			'numberedList',
-			'|',
-			'link',
-			'imageInsert',
-			'insertTable',
-			'mediaEmbed',
-			'|',
-			'undo',
-			'redo',
-			'|',
-			'blockQuote',
-			'horizontalLine',
-			'subscript',
-			'superscript',
-			'todoList',
-			'|',
-			'codeBlock',
-			'sourceEditing'
-		]
-	},
-	language: 'ja',
-	image: {
-		toolbar: [
-			'imageTextAlternative',
-			'imageStyle:inline',
-			'imageStyle:block',
-			'imageStyle:side',
-			'linkImage'
-		]
-	},
-	table: {
-		contentToolbar: [
-			'tableColumn',
-			'tableRow',
-			'mergeTableCells',
-			'tableCellProperties',
-			'tableProperties'
-		]
-	}
+    toolbar: {
+        items: [
+            'heading',
+            '|',
+            'fontSize',
+            'fontColor',
+            'fontBackgroundColor',
+            'highlight',
+            '|',
+            'bold',
+            'italic',
+            'underline',
+            'strikethrough',
+            'subscript',
+            'superscript',
+            'removeFormat',
+            '|',
+            'alignment',
+            'outdent',
+            'indent',
+            '|',
+            'bulletedList',
+            'numberedList',
+            'todoList',
+            '-',
+            'style',
+            '|',
+            'undo',
+            'redo',
+            '|',
+            'link',
+            'imageInsert',
+            'insertTable',
+            'mediaEmbed',
+            '|',
+            'blockQuote',
+            'horizontalLine',
+            {
+                label: 'Others',
+                tooltip: 'Additional editing features',
+                items: [
+                    'htmlEmbed',
+                    'codeBlock',
+                    'sourceEditing',
+                ]
+            },
+        ],
+        shouldNotGroupWhenFull: true
+    },
+    blockToolbar: {
+        items: [
+            'paragraph',
+            '|',
+            'heading1',
+            'heading2',
+            'heading3',
+            '|',
+            'blockQuote',
+        ],
+        shouldNotGroupWhenFull: true
+    },
+    language: 'ja',
+    image: {
+        toolbar: [
+            'imageStyle:inline',
+            'imageStyle:block',
+            'imageStyle:side',
+            '|',
+            'toggleImageCaption',
+            'imageTextAlternative',
+            '|',
+            'linkImage'
+        ],
+    },
+    table: {
+        contentToolbar: [
+            'tableColumn',
+            'tableRow',
+            'mergeTableCells',
+            'tableCellProperties',
+            'tableProperties'
+        ],
+    },
 };
 
 export default Editor;
