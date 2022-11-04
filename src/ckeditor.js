@@ -15,7 +15,7 @@ import DataSchema from '@ckeditor/ckeditor5-html-support/src/dataschema.js';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials.js';
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor.js';
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
-//import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
+import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
 import GeneralHtmlSupport from '@ckeditor/ckeditor5-html-support/src/generalhtmlsupport.js';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading.js';
@@ -76,7 +76,7 @@ Editor.builtinPlugins = [
     Essentials,
     FontBackgroundColor,
     FontColor,
-//    FontFamily,
+    FontFamily,
     FontSize,
     GeneralHtmlSupport,
     Heading,
@@ -121,11 +121,19 @@ Editor.builtinPlugins = [
 
 // Editor configuration.
 Editor.defaultConfig = {
+    fontFamily: {
+        options: [
+            'default',
+            'Noto Sans JP, sans-serif',
+            'さつき現代明朝, SatsukiGendaiMincho, serif',
+        ]
+    },
     toolbar: {
         items: [
             'heading',
             '|',
             'fontSize',
+            'fontFamily',
             'fontColor',
             'fontBackgroundColor',
             'highlight',
