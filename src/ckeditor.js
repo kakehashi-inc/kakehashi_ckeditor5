@@ -124,7 +124,8 @@ Editor.defaultConfig = {
     fontFamily: {
         options: [
             'default',
-            'Noto Sans JP, sans-serif',
+            '源ノ角ゴシック, Noto Sans JP, sans-serif',
+            '源ノ角明朝, SourceHanSerif, serif',
             'さつき現代明朝, SatsukiGendaiMincho, serif',
         ]
     },
