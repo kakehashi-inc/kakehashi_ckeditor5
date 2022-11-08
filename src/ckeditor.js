@@ -206,7 +206,7 @@ Editor.defaultConfig = {
             '|',
             'linkImage'
         ],
-        resizeUnit: "px",
+//        resizeUnit: "px",
     },
     table: {
         contentToolbar: [
