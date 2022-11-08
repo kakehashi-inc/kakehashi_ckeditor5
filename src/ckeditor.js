@@ -195,14 +195,18 @@ Editor.defaultConfig = {
     image: {
         toolbar: [
             'imageStyle:inline',
-            'imageStyle:block',
-            'imageStyle:side',
+//            'imageStyle:block',
+//            "imageStyle:side",
+            "imageStyle:alignLeft",
+            "imageStyle:alignCenter",
+            "imageStyle:alignRight",
             '|',
             'toggleImageCaption',
             'imageTextAlternative',
             '|',
             'linkImage'
         ],
+        resizeUnit: "px",
     },
     table: {
         contentToolbar: [
