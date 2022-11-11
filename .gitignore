@@ -91,3 +91,8 @@ deploy*.sh
 # public folder
 /public
 /storage
+
+# CKEditor default
+build/
+coverage/
+tmp/
