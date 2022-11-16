@@ -217,6 +217,10 @@ Editor.defaultConfig = {
             'tableProperties'
         ],
     },
+    mediaEmbed: {
+        removeProviders: ['instagram', 'twitter', 'googleMaps', 'flickr', 'facebook'],
+        previewsInData: true
+    }
 };
 
 export default Editor;
