@@ -127,7 +127,7 @@ Editor.defaultConfig = {
             '源ノ角ゴシック, Noto Sans JP, sans-serif',
             '源ノ角明朝, SourceHanSerif, serif',
             'さつき現代明朝, SatsukiGendaiMincho, serif',
-        ]
+        ],
     },
     toolbar: {
         items: [
@@ -170,57 +170,97 @@ Editor.defaultConfig = {
             {
                 label: 'Others',
                 tooltip: 'Additional editing features',
-                items: [
-                    'htmlEmbed',
-                    'codeBlock',
-                    'sourceEditing',
-                ]
+                items: ['htmlEmbed', 'codeBlock', 'sourceEditing'],
             },
         ],
-        shouldNotGroupWhenFull: true
+        shouldNotGroupWhenFull: true,
     },
     blockToolbar: {
-        items: [
-            'paragraph',
-            '|',
-            'heading1',
-            'heading2',
-            'heading3',
-            '|',
-            'blockQuote',
-        ],
-        shouldNotGroupWhenFull: true
+        items: ['paragraph', '|', 'heading1', 'heading2', 'heading3', '|', 'blockQuote'],
+        shouldNotGroupWhenFull: true,
     },
     language: 'ja',
     image: {
         toolbar: [
             'imageStyle:inline',
-//            'imageStyle:block',
-//            "imageStyle:side",
-            "imageStyle:alignLeft",
-            "imageStyle:alignCenter",
-            "imageStyle:alignRight",
+            //            'imageStyle:block',
+            //            "imageStyle:side",
+            'imageStyle:alignLeft',
+            'imageStyle:alignCenter',
+            'imageStyle:alignRight',
             '|',
             'toggleImageCaption',
             'imageTextAlternative',
             '|',
-            'linkImage'
+            'linkImage',
         ],
-//        resizeUnit: "px",
+        //        resizeUnit: "px",
     },
     table: {
-        contentToolbar: [
-            'tableColumn',
-            'tableRow',
-            'mergeTableCells',
-            'tableCellProperties',
-            'tableProperties'
-        ],
+        contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells', 'tableCellProperties', 'tableProperties'],
     },
     mediaEmbed: {
         removeProviders: ['instagram', 'twitter', 'googleMaps', 'flickr', 'facebook'],
-        previewsInData: true
-    }
+        previewsInData: true,
+    },
+    htmlSupport: {
+        allow: [
+            {
+                name: /^(div|section|article|aside)$/,
+                attributes: {
+                    id: true,
+                    name: true
+                },
+                classes: true,
+                styles: true
+            },
+            {
+                name: /^(p|h[1-6])$/,
+                classes: true,
+                styles: true
+            },
+            {
+                name: 'a',
+                attributes: {
+                    target: true,
+                    name: true
+                },
+                classes: true,
+                styles: true
+            },
+            {
+                name: 'img',
+                attributes: {
+                    src: true,
+                    alt: true,
+                    width: true,
+                    height: true,
+                    sizes: true,
+                    srcset: true,
+                    crossorigin: true,
+                    decoding: true,
+                    loading: true,
+                    referrerpolicy: true,
+                },
+                classes: true,
+                styles: true
+            },
+            {
+                name: /^(span|br|figure|figcaption|hr|ul|li)$/,
+                classes: true,
+                styles: true
+            },
+            {
+                name: /^(b|i|u|pre|s|small|strong|sub|sup|details|summary)$/
+            },
+            {
+                name: /^(q|blockquote)$/,
+                attributes: {
+                    cite: true
+                },
+            },
+        ],
+    },
 };
 
 export default Editor;
