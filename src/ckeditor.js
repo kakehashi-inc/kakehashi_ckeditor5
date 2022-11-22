@@ -9,7 +9,6 @@ import AutoImage from '@ckeditor/ckeditor5-image/src/autoimage.js';
 import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter.js';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote.js';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold.js';
-import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock.js';
 import DataFilter from '@ckeditor/ckeditor5-html-support/src/datafilter.js';
 import DataSchema from '@ckeditor/ckeditor5-html-support/src/dataschema.js';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials.js';
@@ -70,7 +69,6 @@ Editor.builtinPlugins = [
     Base64UploadAdapter,
     BlockQuote,
     Bold,
-    CodeBlock,
     DataFilter,
     DataSchema,
     Essentials,
@@ -170,7 +168,7 @@ Editor.defaultConfig = {
             {
                 label: 'Others',
                 tooltip: 'Additional editing features',
-                items: ['htmlEmbed', 'codeBlock', 'sourceEditing'],
+                items: ['htmlEmbed', 'sourceEditing'],
             },
         ],
         shouldNotGroupWhenFull: true,
