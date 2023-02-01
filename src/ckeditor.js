@@ -128,6 +128,26 @@ Editor.defaultConfig = {
             'さつき現代明朝, SatsukiGendaiMincho, serif',
         ],
     },
+    fontSize: {
+        options: [
+            'tiny',
+            'small',
+            'default',
+            'big',
+            'huge',
+            12,
+            14,
+            16,
+            18,
+            20,
+            22,
+            24,
+            26,
+            28,
+            36,
+            48,
+        ]
+    },
     toolbar: {
         items: [
             'heading',
@@ -251,6 +271,12 @@ Editor.defaultConfig = {
                     loading: true,
                     referrerpolicy: true,
                 },
+                classes: true,
+                styles: true
+            },
+            {
+                name: 'iframe',
+                attributes: true,
                 classes: true,
                 styles: true
             },
