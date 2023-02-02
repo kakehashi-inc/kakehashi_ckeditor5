@@ -229,7 +229,7 @@ Editor.defaultConfig = {
         contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells', 'tableCellProperties', 'tableProperties'],
     },
     mediaEmbed: {
-        //removeProviders: ['instagram', 'twitter', 'googleMaps', 'flickr', 'facebook'],
+        removeProviders: ['instagram', 'twitter', 'googleMaps', 'flickr', 'facebook'],
         previewsInData: true,
     },
     htmlSupport: {
