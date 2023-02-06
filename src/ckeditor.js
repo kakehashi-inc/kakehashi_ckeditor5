@@ -130,23 +130,29 @@ Editor.defaultConfig = {
     },
     fontSize: {
         options: [
-            'tiny',
-            'small',
+            {
+                title: '極小',
+                model: '0.7em'
+            },
+            {
+                title: '小',
+                model: '0.85em'
+            },
             'default',
-            'big',
-            'huge',
-            12,
-            14,
-            16,
-            18,
-            20,
-            22,
-            24,
-            26,
-            28,
-            36,
-            48,
-        ]
+            {
+                title: '大',
+                model: '1.4em'
+            },
+            {
+                title: '極大 1.8',
+                model: '1.8em'
+            },
+            {
+                title: '極大 2.4',
+                model: '2.4em'
+            },
+        ],
+        supportAllValues: true,
     },
     toolbar: {
         items: [
