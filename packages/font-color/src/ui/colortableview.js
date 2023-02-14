@@ -24,7 +24,6 @@ export default class ColorTableView extends View {
             closeButtonLabel,
             removeButtonLabel,
             themeColorsLabel,
-            customColorLabel,
         }
     ) {
         super(locale);
@@ -75,7 +74,6 @@ export default class ColorTableView extends View {
         }
 
         this.colorInputView = this._createColorInputView(closeButtonLabel);
-        this.items.add(this._createLabel(customColorLabel));
         this.items.add(this.colorInputView);
     }
 
