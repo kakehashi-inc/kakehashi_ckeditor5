@@ -24,7 +24,6 @@ export default class ColorTableView extends View {
             closeButtonLabel,
             removeButtonLabel,
             themeColorsLabel,
-            exactColorsLabel,
             customColorLabel,
         }
     ) {
@@ -72,7 +71,6 @@ export default class ColorTableView extends View {
 
         if (exactColors.length > 0) {
             this.exactColorsGrid = this._createColorsGrid(this.exactColors);
-            this.items.add(this._createLabel(exactColorsLabel));
             this.items.add(this.exactColorsGrid);
         }
 

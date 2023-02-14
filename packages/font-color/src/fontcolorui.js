@@ -45,7 +45,6 @@ export default class FontColorUI extends Plugin {
                 removeButtonLabel: t('Remove color'),
                 themeColorsLabel: t('Theme colors'),
                 customColorLabel: t('Custom color'),
-                exactColorsLabel: t('Exact colors'),
             });
 
             dropdownView.panelView.children.add(this.colorTableView);
