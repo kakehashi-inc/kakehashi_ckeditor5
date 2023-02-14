@@ -59,6 +59,8 @@ import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar'
 import HeadingButtonsUI from '@ckeditor/ckeditor5-heading/src/headingbuttonsui';
 import ParagraphButtonUI from '@ckeditor/ckeditor5-paragraph/src/paragraphbuttonui';
 
+//import CKEditorInspector from '@ckeditor/ckeditor5-inspector';
+
 class Editor extends ClassicEditor {}
 
 // Plugins to include in the build.

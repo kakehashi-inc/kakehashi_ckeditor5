@@ -1,0 +1,8 @@
+{
+	"Font Color": "Label of a button that allows selecting a font color.",
+	"Remove color": "Label or a button that removes the color from the text.",
+  	"Theme colors": "Label for the list of theme colors.",
+  	"Custom color": "Label for the custom color.",
+  	"Exact colors": "Label for non-theme colors.",
+    "Select color": "Label for for select color button."
+}
