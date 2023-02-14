@@ -120,40 +120,6 @@ Editor.builtinPlugins = [
 // Editor configuration.
 Editor.defaultConfig = {
     language: 'ja',
-    fontFamily: {
-        options: [
-            'default',
-            '源ノ角ゴシック, Noto Sans JP, sans-serif',
-            '源ノ角明朝, SourceHanSerif, serif',
-            'さつき現代明朝, SatsukiGendaiMincho, serif',
-        ],
-    },
-    fontSize: {
-        options: [
-            {
-                title: '極小',
-                model: '0.7em'
-            },
-            {
-                title: '小',
-                model: '0.85em'
-            },
-            'default',
-            {
-                title: '大',
-                model: '1.4em'
-            },
-            {
-                title: '極大 1.8',
-                model: '1.8em'
-            },
-            {
-                title: '極大 2.4',
-                model: '2.4em'
-            },
-        ],
-        supportAllValues: true,
-    },
     toolbar: {
         items: [
             'heading',
@@ -203,6 +169,40 @@ Editor.defaultConfig = {
     blockToolbar: {
         items: ['paragraph', '|', 'heading1', 'heading2', 'heading3', 'heading4', 'heading5', 'heading6', '|', 'blockQuote'],
         shouldNotGroupWhenFull: true,
+    },
+    fontFamily: {
+        options: [
+            'default',
+            '源ノ角ゴシック, Noto Sans JP, sans-serif',
+            '源ノ角明朝, SourceHanSerif, serif',
+            'さつき現代明朝, SatsukiGendaiMincho, serif',
+        ],
+    },
+    fontSize: {
+        options: [
+            {
+                title: '極小',
+                model: '0.7em'
+            },
+            {
+                title: '小',
+                model: '0.85em'
+            },
+            'default',
+            {
+                title: '大',
+                model: '1.4em'
+            },
+            {
+                title: '極大 1.8',
+                model: '1.8em'
+            },
+            {
+                title: '極大 2.4',
+                model: '2.4em'
+            },
+        ],
+        supportAllValues: true,
     },
     heading: {
         options: [
