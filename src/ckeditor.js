@@ -117,7 +117,9 @@ Editor.builtinPlugins = [
     TextTransformation,
     TodoList,
     Underline,
-    BlockToolbar, ParagraphButtonUI, HeadingButtonsUI,
+    BlockToolbar,
+    ParagraphButtonUI,
+    HeadingButtonsUI,
 ];
 
 // Editor configuration.
@@ -170,7 +172,18 @@ Editor.defaultConfig = {
         shouldNotGroupWhenFull: true,
     },
     blockToolbar: {
-        items: ['paragraph', '|', 'heading1', 'heading2', 'heading3', 'heading4', 'heading5', 'heading6', '|', 'blockQuote'],
+        items: [
+            'paragraph',
+            '|',
+            'heading1',
+            'heading2',
+            'heading3',
+            'heading4',
+            'heading5',
+            'heading6',
+            '|',
+            'blockQuote',
+        ],
         shouldNotGroupWhenFull: true,
     },
     fontFamily: {
@@ -185,24 +198,24 @@ Editor.defaultConfig = {
         options: [
             {
                 title: '極小',
-                model: '0.7em'
+                model: '0.7em',
             },
             {
                 title: '小',
-                model: '0.85em'
+                model: '0.85em',
             },
             'default',
             {
                 title: '大',
-                model: '1.4em'
+                model: '1.4em',
             },
             {
                 title: '極大 1.8',
-                model: '1.8em'
+                model: '1.8em',
             },
             {
                 title: '極大 2.4',
-                model: '2.4em'
+                model: '2.4em',
             },
         ],
         supportAllValues: true,
@@ -215,8 +228,8 @@ Editor.defaultConfig = {
             { model: 'heading3', view: 'h3', title: 'Heading 3', class: 'ck-heading_heading3' },
             { model: 'heading4', view: 'h4', title: 'Heading 4', class: 'ck-heading_heading4' },
             { model: 'heading5', view: 'h5', title: 'Heading 5', class: 'ck-heading_heading5' },
-            { model: 'heading6', view: 'h6', title: 'Heading 6', class: 'ck-heading_heading6' }
-        ]
+            { model: 'heading6', view: 'h6', title: 'Heading 6', class: 'ck-heading_heading6' },
+        ],
     },
     image: {
         toolbar: [
@@ -247,24 +260,24 @@ Editor.defaultConfig = {
                 name: /^(div|section|article|aside)$/,
                 attributes: {
                     id: true,
-                    name: true
+                    name: true,
                 },
                 classes: true,
-                styles: true
+                styles: true,
             },
             {
                 name: /^(p|h[1-6])$/,
                 classes: true,
-                styles: true
+                styles: true,
             },
             {
                 name: 'a',
                 attributes: {
                     target: true,
-                    name: true
+                    name: true,
                 },
                 classes: true,
-                styles: true
+                styles: true,
             },
             {
                 name: 'img',
@@ -281,26 +294,26 @@ Editor.defaultConfig = {
                     referrerpolicy: true,
                 },
                 classes: true,
-                styles: true
+                styles: true,
             },
             {
                 name: 'iframe',
                 attributes: true,
                 classes: true,
-                styles: true
+                styles: true,
             },
             {
                 name: /^(span|br|figure|figcaption|hr|ul|li)$/,
                 classes: true,
-                styles: true
+                styles: true,
             },
             {
-                name: /^(b|i|u|pre|s|small|strong|sub|sup|details|summary)$/
+                name: /^(b|i|u|pre|s|small|strong|sub|sup|details|summary)$/,
             },
             {
                 name: /^(q|blockquote)$/,
                 attributes: {
-                    cite: true
+                    cite: true,
                 },
             },
         ],
