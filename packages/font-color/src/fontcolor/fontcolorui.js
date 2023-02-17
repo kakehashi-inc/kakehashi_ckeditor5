@@ -4,10 +4,10 @@
  */
 
 import { FONT_COLOR } from './constants';
-import fontColorIcon from '../theme/icons/font-color.svg';
+import fontColorIcon from '../../theme/icons/font-color.svg';
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
-import ColorTableView from './ui/colortableview';
-import { removeWhitespaceFromColor } from './utils';
+import ColorTableView from '../ui/colortableview';
+import { removeWhitespaceFromColor } from '../utils';
 import { createDropdown } from '@ckeditor/ckeditor5-ui/src/dropdown/utils';
 
 export default class FontColorUI extends Plugin {
