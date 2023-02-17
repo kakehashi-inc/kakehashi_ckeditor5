@@ -10,6 +10,16 @@ import ColorTableView from '../ui/colortableview';
 import { removeWhitespaceFromColor } from '../utils';
 import { createDropdown } from '@ckeditor/ckeditor5-ui/src/dropdown/utils';
 
+import i18next from 'i18next';
+
+import languageBundle from '@lang/index?targets=font-color';
+i18next.init({
+    fallbackLng: 'ja',
+    resources: languageBundle,
+    ns: ['font-color'],
+    defaultNS: 'font-color',
+});
+
 export default class FontColorUI extends Plugin {
     constructor(editor) {
         super(editor);
@@ -23,7 +33,6 @@ export default class FontColorUI extends Plugin {
 
     init() {
         const editor = this.editor;
-        //It is important for this function to be called t() - otherwise translations wont be added during build
         const t = editor.t;
         const fontColorCommand = editor.commands.get(this.commandName);
         const columns = editor.config.get(this.componentName).columns;
@@ -41,9 +50,9 @@ export default class FontColorUI extends Plugin {
                 exactColors,
                 themeColors,
                 columns,
-                closeButtonLabel: t('Select color'),
-                removeButtonLabel: t('Remove color'),
-                themeColorsLabel: t('Theme colors'),
+                closeButtonLabel: i18next.t('Select color'),
+                removeButtonLabel: i18next.t('Remove color'),
+                themeColorsLabel: i18next.t('Theme colors'),
             });
 
             dropdownView.panelView.children.add(this.colorTableView);
@@ -52,7 +61,7 @@ export default class FontColorUI extends Plugin {
             this.colorTableView.bind('selectedColor').to(fontColorCommand, 'value');
 
             dropdownView.buttonView.set({
-                label: t('Font Color'),
+                label: i18next.t('Font Color'),
                 icon: fontColorIcon,
                 tooltip: true,
             });
