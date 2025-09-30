@@ -37,7 +37,7 @@ import {
     List,
     ListProperties,
     MediaEmbed,
-    MediaEmbedToolbar,
+    //MediaEmbedToolbar,
     Paragraph,
     PasteFromOffice,
     RemoveFormat,
@@ -61,12 +61,14 @@ import {
 } from 'ckeditor5';
 
 //import FontColor from '@packages/font-color/src/fontcolor.js';
+import ContainerBlock from '@packages/container-block/src/containerblock.js';
 
 //import CKEditorInspector from '@ckeditor/ckeditor5-inspector';
 
 import translations from 'ckeditor5/translations/ja.js';
 
 import 'ckeditor5/ckeditor5.css';
+import '@packages/container-block/theme/containerblock.css';
 
 /**
  * Create a free account with a trial: https://portal.ckeditor.com/checkout?plan=free
@@ -83,6 +85,7 @@ Editor.builtinPlugins = [
     Base64UploadAdapter,
     BlockQuote,
     Bold,
+    ContainerBlock,
     DataFilter,
     DataSchema,
     Essentials,
@@ -110,7 +113,7 @@ Editor.builtinPlugins = [
     List,
     ListProperties,
     MediaEmbed,
-    MediaEmbedToolbar,
+    //MediaEmbedToolbar,
     Paragraph,
     PasteFromOffice,
     RemoveFormat,
@@ -172,6 +175,7 @@ Editor.defaultConfig = {
             'link',
             'imageInsert',
             'insertTable',
+            'containerBlock',
             'mediaEmbed',
             '|',
             'blockQuote',

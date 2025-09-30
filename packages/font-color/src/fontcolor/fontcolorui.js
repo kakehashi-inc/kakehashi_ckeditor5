@@ -1,8 +1,3 @@
-/**
- * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
- * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
- */
-
 import { FONT_COLOR } from './constants';
 import fontColorIcon from '../../theme/icons/font-color.svg';
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';

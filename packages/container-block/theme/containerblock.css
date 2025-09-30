@@ -1,0 +1,190 @@
+/* Data view (output) */
+.ck-content .container-block {
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Editing view */
+.ck-editor__editable .container-block {
+    outline: 2px dashed #ccc;
+    padding: 0 !important;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    min-height: 1.6rem;
+    transition: outline-color 0.2s ease;
+    position: relative;
+}
+
+.ck-editor__editable .container-block > * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.ck-editor__editable .container-block > *:first-child {
+    margin-top: 0 !important;
+}
+
+.ck-editor__editable .container-block > *:last-child:not(.ck-container-resize-handle) {
+    margin-bottom: 0 !important;
+}
+
+.ck-editor__editable .container-block:hover,
+.ck-editor__editable .container-block:focus-within {
+    outline-color: #1b9aee;
+    outline-width: 2px;
+    outline-style: solid;
+}
+
+/* Balloon toolbar */
+.ck-container-block-toolbar {
+    background: var(--ck-color-toolbar-background);
+    border: 1px solid var(--ck-color-toolbar-border);
+    border-radius: var(--ck-border-radius);
+    box-shadow:
+        var(--ck-drop-shadow),
+        0 0;
+    padding: 0;
+    min-width: 300px;
+}
+
+.ck-container-toolbar-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border-bottom: 1px solid var(--ck-color-toolbar-border);
+}
+
+.ck-container-toolbar-row:first-child {
+    flex-direction: column;
+    width: 100%;
+    padding: 3px 6px;
+}
+
+.ck-container-toolbar-row:nth-child(2) {
+    padding: 2px 4px;
+}
+
+.ck-container-toolbar-row:last-child {
+    border-bottom: none;
+    padding: 2px 4px;
+    justify-content: center;
+    gap: 2px;
+}
+
+.ck-container-block-toolbar .ck-container-info {
+    font-size: 14px !important;
+    font-weight: bold !important;
+    color: var(--ck-color-base-text) !important;
+    padding: 3px 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+    background: var(--ck-color-base-foreground) !important;
+    border-radius: var(--ck-border-radius) !important;
+    line-height: 1.2 !important;
+}
+
+.ck-container-controls {
+    display: flex;
+    gap: 1px;
+}
+
+.ck-container-block-toolbar .ck-button.ck-container-preset-button,
+.ck-container-block-toolbar .ck-button.ck-container-align-button {
+    padding: 3px 10px !important;
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+    border: 1px solid transparent !important;
+    background: transparent !important;
+    border-radius: var(--ck-border-radius) !important;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    min-width: auto !important;
+    min-height: auto !important;
+    height: auto !important;
+    text-align: center;
+    color: var(--ck-color-base-text) !important;
+}
+
+.ck-container-block-toolbar .ck-button.ck-container-preset-button:hover,
+.ck-container-block-toolbar .ck-button.ck-container-align-button:hover {
+    background: var(--ck-color-button-default-hover-background) !important;
+}
+
+.ck-container-block-toolbar .ck-button.ck-container-preset-button:active,
+.ck-container-block-toolbar .ck-button.ck-container-align-button:active {
+    background: var(--ck-color-button-default-active-background) !important;
+    box-shadow: inset 0 1px 2px var(--ck-color-button-default-active-shadow) !important;
+}
+
+/* Insert buttons */
+.ck-container-insert-controls {
+    justify-content: center;
+    width: 100%;
+    gap: 1px;
+}
+
+.ck-container-block-toolbar .ck-button.ck-container-insert-button {
+    padding: 3px 10px !important;
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+    border: 1px solid transparent !important;
+    background: transparent !important;
+    border-radius: var(--ck-border-radius) !important;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    min-width: auto !important;
+    min-height: auto !important;
+    height: auto !important;
+    text-align: center;
+    color: var(--ck-color-base-text) !important;
+}
+
+.ck-container-block-toolbar .ck-button.ck-container-insert-button:hover {
+    background: var(--ck-color-button-default-hover-background) !important;
+}
+
+.ck-container-block-toolbar .ck-button.ck-container-insert-button:active {
+    background: var(--ck-color-button-default-active-background) !important;
+    box-shadow: inset 0 1px 2px var(--ck-color-button-default-active-shadow) !important;
+}
+
+/* Resize handle */
+.ck-container-resize-handle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 12px;
+    cursor: ew-resize;
+    background: transparent;
+    z-index: 10;
+    transition: background 0.2s ease;
+}
+
+.ck-editor__editable .container-block:hover .ck-container-resize-handle {
+    background: rgba(27, 154, 238, 0.2);
+}
+
+.ck-container-resize-handle:hover {
+    background: rgba(27, 154, 238, 0.4) !important;
+}
+
+.ck-container-resize-handle::after {
+    content: '';
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 30px;
+    background: rgba(27, 154, 238, 0.6);
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.ck-editor__editable .container-block:hover .ck-container-resize-handle::after,
+.ck-container-resize-handle:hover::after {
+    opacity: 1;
+}
