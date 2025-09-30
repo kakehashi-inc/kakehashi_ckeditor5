@@ -104,6 +104,5 @@ deploy*.sh
 /storage
 
 # CKEditor default
-build/
 coverage/
 tmp/

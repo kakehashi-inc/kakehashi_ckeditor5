@@ -9,8 +9,6 @@
 
 const path = require('path');
 const webpack = require('webpack');
-const { bundler, styles } = require('@ckeditor/ckeditor5-dev-utils');
-const { CKEditorTranslationsPlugin } = require('@ckeditor/ckeditor5-dev-translations');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 
 module.exports = {
@@ -55,14 +53,8 @@ module.exports = {
     },
 
     plugins: [
-        new CKEditorTranslationsPlugin({
-            // UI language. Language codes follow the https://en.wikipedia.org/wiki/ISO_639-1 format.
-            // When changing the built-in language, remember to also change it in the editor's configuration (src/ckeditor.js).
-            language: 'ja',
-            additionalLanguages: 'all',
-        }),
         new webpack.BannerPlugin({
-            banner: bundler.getLicenseBanner(),
+            banner: '/*! CKEditor 5 Custom Build - Licensed under GPL-2.0+ */',
             raw: true,
         }),
     ],
@@ -87,17 +79,6 @@ module.exports = {
                     },
                     {
                         loader: 'css-loader',
-                    },
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            postcssOptions: styles.getPostCssConfig({
-                                themeImporter: {
-                                    themePath: require.resolve('@ckeditor/ckeditor5-theme-lark'),
-                                },
-                                minify: true,
-                            }),
-                        },
                     },
                 ],
             },
