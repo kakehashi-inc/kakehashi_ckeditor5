@@ -65,8 +65,9 @@ module.exports = {
                 test: /\.svg$/,
                 use: ['raw-loader'],
             },
+            // Process only CKEditor core stylesheet without PostCSS (already processed upstream)
             {
-                test: /\.css$/,
+                test: /ckeditor5\.css$/,
                 use: [
                     {
                         loader: 'style-loader',
@@ -77,9 +78,25 @@ module.exports = {
                             },
                         },
                     },
+                    'css-loader',
+                ],
+            },
+            // Generic CSS rule with PostCSS
+            {
+                test: /\.css$/,
+                exclude: /ckeditor5\.css$/,
+                use: [
                     {
-                        loader: 'css-loader',
+                        loader: 'style-loader',
+                        options: {
+                            injectType: 'singletonStyleTag',
+                            attributes: {
+                                'data-cke': true,
+                            },
+                        },
                     },
+                    'css-loader',
+                    'postcss-loader',
                 ],
             },
             {

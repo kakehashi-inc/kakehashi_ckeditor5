@@ -13,6 +13,12 @@
     min-height: 1.6rem;
     transition: outline-color 0.2s ease;
     position: relative;
+
+    overflow: hidden;
+    @supports (display: flow-root) {
+        overflow: visible;
+        display: flow-root;
+    }
 }
 
 .ck-editor__editable .container-block > * {
@@ -57,6 +63,7 @@
 
 .ck-container-toolbar-row:first-child {
     flex-direction: column;
+    -ms-flex-direction: column;
     width: 100%;
     padding: 3px 6px;
 }
