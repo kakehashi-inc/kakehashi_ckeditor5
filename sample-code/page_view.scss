@@ -1,0 +1,322 @@
+@charset "utf-8";
+
+// mdbのスタイルの無効化
+.wysiwyg {
+    a:not(.sidenav-link):not(.btn):not(.dropdown-item):not(.nav-link):not(.navbar-brand):not(.page-link):not(
+            .carousel-control-prev
+        ):not(.carousel-control-next) {
+        color: var(--mdb-primary);
+    }
+    a:not(.sidenav-link):not(.btn):not(.dropdown-item):not(.nav-link):not(.navbar-brand):not(.page-link):not(
+            .carousel-control-prev
+        ):not(.carousel-control-next):hover {
+        color: var(--mdb-primary);
+    }
+    a {
+        text-decoration: underline;
+    }
+
+    mark,
+    .mark {
+        padding: inherit;
+    }
+
+    hr {
+        margin: inherit;
+        color: inherit;
+        background-color: inherit;
+        border: inherit;
+        opacity: inherit;
+    }
+
+    .table {
+        width: inherit;
+        margin-bottom: inherit;
+        color: inherit;
+        background: inherit;
+        vertical-align: inherit;
+        border-color: inherit;
+        font-size: inherit;
+
+        > :not(caption) > * > * {
+            padding: inherit;
+            background-color: inherit;
+            border-bottom-width: inherit;
+            box-shadow: inherit;
+        }
+
+        > tbody {
+            vertical-align: inherit;
+        }
+
+        > thead {
+            vertical-align: inherit;
+        }
+
+        > :not(:first-child) {
+            border-top: inherit;
+        }
+    }
+}
+
+// CKEditor必須スタイル
+:root {
+    --ck-image-style-spacing: 1.5em;
+    --ck-inline-image-style-spacing: calc(var(--ck-image-style-spacing) / 2);
+    --ck-highlight-marker-yellow: #fdfd77;
+    --ck-highlight-marker-green: #62f962;
+    --ck-highlight-marker-pink: #fc7899;
+    --ck-highlight-marker-blue: #72ccfd;
+    --ck-highlight-pen-red: #e71313;
+    --ck-highlight-pen-green: #128a00;
+    --ck-todo-list-checkmark-size: 16px;
+}
+.wysiwyg {
+    overflow: auto;
+
+    .text-tiny {
+        font-size: 0.7em;
+    }
+
+    .text-small {
+        font-size: 0.85em;
+    }
+
+    .text-big {
+        font-size: 1.4em;
+    }
+
+    .text-huge {
+        font-size: 1.8em;
+    }
+
+    /* Provides a minimal side margin for the left and right aligned images, so that the user has a visual feedback
+	confirming successful application of the style if image width exceeds the editor's size.
+	See https://github.com/ckeditor/ckeditor5/issues/9342 */
+    & .image-style-block-align-left,
+    & .image-style-block-align-right {
+        max-width: calc(100% - var(--ck-image-style-spacing));
+    }
+
+    /* Allows displaying multiple floating images in the same line.
+	See https://github.com/ckeditor/ckeditor5/issues/9183#issuecomment-804988132 */
+    & .image-style-align-left,
+    & .image-style-align-right {
+        clear: none;
+    }
+
+    & .image-style-side {
+        float: right;
+        margin-left: var(--ck-image-style-spacing);
+        max-width: 50%;
+    }
+
+    & .image-style-align-left {
+        float: left;
+        margin-right: var(--ck-image-style-spacing);
+    }
+
+    & .image-style-align-center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    & .image-style-align-right {
+        float: right;
+        margin-left: var(--ck-image-style-spacing);
+    }
+
+    & .image-style-block-align-right {
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    & .image-style-block-align-left {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    /* Simulates margin collapsing with the preceding paragraph, which does not work for the floating elements. */
+    & p + .image-style-align-left,
+    & p + .image-style-align-right,
+    & p + .image-style-side {
+        margin-top: 0;
+    }
+
+    & .image-inline {
+        &.image-style-align-left,
+        &.image-style-align-right {
+            margin-top: var(--ck-inline-image-style-spacing);
+            margin-bottom: var(--ck-inline-image-style-spacing);
+        }
+
+        &.image-style-align-left {
+            margin-right: var(--ck-inline-image-style-spacing);
+        }
+
+        &.image-style-align-right {
+            margin-left: var(--ck-inline-image-style-spacing);
+        }
+    }
+
+    .image {
+        position: relative;
+        clear: both;
+        display: table;
+        margin: 0.9em auto;
+        min-width: 50px;
+        text-align: center;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            min-width: 100%;
+            height: auto;
+        }
+    }
+
+    figure {
+        &.image {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .marker-yellow {
+        background-color: var(--ck-highlight-marker-yellow);
+    }
+    .marker-green {
+        background-color: var(--ck-highlight-marker-green);
+    }
+    .marker-pink {
+        background-color: var(--ck-highlight-marker-pink);
+    }
+    .marker-blue {
+        background-color: var(--ck-highlight-marker-blue);
+    }
+    .pen-red {
+        background-color: transparent;
+        color: var(--ck-highlight-pen-red);
+    }
+    .pen-green {
+        background-color: transparent;
+        color: var(--ck-highlight-pen-green);
+    }
+
+    .todo-list {
+        list-style: none;
+    }
+    .todo-list li {
+        margin-bottom: 5px;
+    }
+    .todo-list li .todo-list {
+        margin-top: 5px;
+    }
+    .todo-list .todo-list__label > input {
+        -webkit-appearance: none;
+        border: 0;
+        display: inline-block;
+        height: var(--ck-todo-list-checkmark-size);
+        left: -25px;
+        margin-left: 0;
+        margin-right: -15px;
+        position: relative;
+        right: 0;
+        vertical-align: middle;
+        width: var(--ck-todo-list-checkmark-size);
+    }
+    .todo-list .todo-list__label > input:before {
+        border: 1px solid #333;
+        border-radius: 2px;
+        box-sizing: border-box;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition:
+            box-shadow 0.25s ease-in-out,
+            background 0.25s ease-in-out,
+            border 0.25s ease-in-out;
+        width: 100%;
+    }
+    .todo-list .todo-list__label > input:after {
+        border-color: transparent;
+        border-style: solid;
+        border-width: 0 calc(var(--ck-todo-list-checkmark-size) / 8) calc(var(--ck-todo-list-checkmark-size) / 8) 0;
+        box-sizing: content-box;
+        content: '';
+        display: block;
+        height: calc(var(--ck-todo-list-checkmark-size) / 2.6);
+        left: calc(var(--ck-todo-list-checkmark-size) / 3);
+        pointer-events: none;
+        position: absolute;
+        top: calc(var(--ck-todo-list-checkmark-size) / 5.3);
+        transform: rotate(45deg);
+        width: calc(var(--ck-todo-list-checkmark-size) / 5.3);
+    }
+    .todo-list .todo-list__label > input[checked]:before {
+        background: #26ab33;
+        border-color: #26ab33;
+    }
+    .todo-list .todo-list__label > input[checked]:after {
+        border-color: #fff;
+    }
+    .todo-list .todo-list__label .todo-list__label__description {
+        vertical-align: middle;
+    }
+
+    blockquote {
+        border-left: 5px solid #ccc;
+        font-style: italic;
+        margin-left: 0;
+        margin-right: 0;
+        overflow: hidden;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    hr {
+        background: #dedede;
+        border: 0;
+        height: 4px;
+        margin: 15px 0;
+    }
+
+    .table {
+        display: table;
+        margin: 0.9em auto;
+
+        .ck-table-resized {
+            table-layout: fixed;
+        }
+
+        table {
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+
+            td,
+            th {
+                position: relative;
+                min-width: 2em;
+                padding: 0.4em;
+            }
+        }
+    }
+
+    .media {
+        clear: both;
+        display: block;
+        margin: 0.9em 0;
+        min-width: 15em;
+    }
+
+    .container-block {
+        overflow: hidden;
+        @supports (display: flow-root) {
+            overflow: visible;
+            display: flow-root;
+        }
+    }
+}
