@@ -1,0 +1,17 @@
+{
+    "Grid Layout": "Bo cuc luoi",
+    "Columns": "So cot",
+    "Insert": "Chen",
+    "Cancel": "Huy",
+    "Gap": "Khoang cach",
+    "Add row": "Them hang",
+    "Delete selected row": "Xoa hang da chon",
+    "Insert paragraph before": "Chen doan van truoc",
+    "Insert paragraph after": "Chen doan van sau",
+    "columns": "cot",
+    "Grid help text": "Su dung luoi 12 cot de thiet lap ty le. Tong gia tri cua moi diem ngat phai bang 12 (vi du: 8:4 = 2/3 + 1/3). Default la bat buoc. MD, LG, XL la tuy chon nhung khi su dung, tat ca cac cot trong diem ngat do phai duoc dien.",
+    "Col": "Cot",
+    "Default is required (1-12)": "Default la bat buoc (1-12)",
+    "all columns must have a value (1-12)": "tat ca cac cot phai co gia tri (1-12)",
+    "sum must be 12 (currently %{sum})": "tong phai bang 12 (hien tai %{sum})"
+}

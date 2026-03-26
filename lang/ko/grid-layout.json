@@ -1,0 +1,17 @@
+{
+    "Grid Layout": "그리드 레이아웃",
+    "Columns": "열 수",
+    "Insert": "삽입",
+    "Cancel": "취소",
+    "Gap": "간격",
+    "Add row": "행 추가",
+    "Delete selected row": "선택 행 삭제",
+    "Insert paragraph before": "앞에 단락 삽입",
+    "Insert paragraph after": "뒤에 단락 삽입",
+    "columns": "열",
+    "Grid help text": "12열 그리드로 비율을 설정합니다. 각 중단점의 값 합계는 12여야 합니다 (예: 8:4 = 2/3 + 1/3). Default는 필수입니다. MD, LG, XL은 선택 사항이지만 사용 시 해당 중단점의 모든 열을 입력해야 합니다.",
+    "Col": "열",
+    "Default is required (1-12)": "Default는 필수입니다 (1-12)",
+    "all columns must have a value (1-12)": "모든 열에 값을 입력해야 합니다 (1-12)",
+    "sum must be 12 (currently %{sum})": "합계는 12여야 합니다 (현재 %{sum})"
+}

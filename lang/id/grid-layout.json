@@ -1,0 +1,17 @@
+{
+    "Grid Layout": "Tata letak grid",
+    "Columns": "Jumlah kolom",
+    "Insert": "Sisipkan",
+    "Cancel": "Batal",
+    "Gap": "Jarak",
+    "Add row": "Tambah baris",
+    "Delete selected row": "Hapus baris terpilih",
+    "Insert paragraph before": "Sisipkan paragraf sebelum",
+    "Insert paragraph after": "Sisipkan paragraf sesudah",
+    "columns": "kolom",
+    "Grid help text": "Gunakan grid 12 kolom untuk mengatur rasio. Jumlah nilai setiap breakpoint harus 12 (contoh: 8:4 = 2/3 + 1/3). Default wajib diisi. MD, LG, XL opsional tetapi jika digunakan, semua kolom pada breakpoint tersebut harus diisi.",
+    "Col": "Kolom",
+    "Default is required (1-12)": "Default wajib diisi (1-12)",
+    "all columns must have a value (1-12)": "semua kolom harus memiliki nilai (1-12)",
+    "sum must be 12 (currently %{sum})": "jumlah harus 12 (saat ini %{sum})"
+}

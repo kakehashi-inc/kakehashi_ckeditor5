@@ -1,0 +1,17 @@
+{
+    "Grid Layout": "グリッドレイアウト",
+    "Columns": "列数",
+    "Insert": "挿入",
+    "Cancel": "キャンセル",
+    "Gap": "間隔",
+    "Add row": "行追加",
+    "Delete selected row": "選択行削除",
+    "Insert paragraph before": "前に段落を追加",
+    "Insert paragraph after": "後に段落を追加",
+    "columns": "列",
+    "Grid help text": "12カラムグリッドで比率を設定します。各ブレークポイントの値の合計は12にしてください（例: 8:4 = 2/3 + 1/3）。Defaultは常に必須です。MD、LG、XLはオプションですが、使用する場合はその区分のすべての列に値を入力してください。",
+    "Col": "列",
+    "Default is required (1-12)": "Default は必須です (1-12)",
+    "all columns must have a value (1-12)": "すべての列に値を入力してください (1-12)",
+    "sum must be 12 (currently %{sum})": "合計は12にしてください（現在 %{sum}）"
+}

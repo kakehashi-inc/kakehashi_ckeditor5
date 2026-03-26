@@ -1,0 +1,17 @@
+{
+    "Grid Layout": "Grid Layout",
+    "Columns": "Columns",
+    "Insert": "Insert",
+    "Cancel": "Cancel",
+    "Gap": "Gap",
+    "Add row": "Add row",
+    "Delete selected row": "Delete selected row",
+    "Insert paragraph before": "Insert paragraph before",
+    "Insert paragraph after": "Insert paragraph after",
+    "columns": "columns",
+    "Grid help text": "Each breakpoint uses a 12-column grid. Set column widths so they total 12 to define the ratio (e.g. 8:4 = 2/3 + 1/3). Default is always required. MD, LG, XL are optional but when used, all columns in that breakpoint must be filled.",
+    "Col": "Col",
+    "Default is required (1-12)": "Default is required (1-12)",
+    "all columns must have a value (1-12)": "all columns must have a value (1-12)",
+    "sum must be 12 (currently %{sum})": "sum must be 12 (currently %{sum})"
+}

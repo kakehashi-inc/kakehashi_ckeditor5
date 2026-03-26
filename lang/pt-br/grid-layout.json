@@ -1,0 +1,17 @@
+{
+    "Grid Layout": "Layout de grade",
+    "Columns": "Colunas",
+    "Insert": "Inserir",
+    "Cancel": "Cancelar",
+    "Gap": "Espacamento",
+    "Add row": "Adicionar linha",
+    "Delete selected row": "Excluir linha selecionada",
+    "Insert paragraph before": "Inserir paragrafo antes",
+    "Insert paragraph after": "Inserir paragrafo depois",
+    "columns": "colunas",
+    "Grid help text": "Use a grade de 12 colunas para definir proporcoes. A soma dos valores de cada ponto de interrupcao deve ser 12 (ex: 8:4 = 2/3 + 1/3). Default e obrigatorio. MD, LG, XL sao opcionais, mas quando usados, todas as colunas desse ponto de interrupcao devem ser preenchidas.",
+    "Col": "Col",
+    "Default is required (1-12)": "Default e obrigatorio (1-12)",
+    "all columns must have a value (1-12)": "todas as colunas devem ter um valor (1-12)",
+    "sum must be 12 (currently %{sum})": "a soma deve ser 12 (atualmente %{sum})"
+}

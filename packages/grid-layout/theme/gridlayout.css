@@ -1,0 +1,364 @@
+/* ============================================================
+   Grid system for editor view
+   ============================================================ */
+
+.ck-grid-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ck-grid-row.ck-grid-g-0 { --ck-grid-gutter: 0; }
+.ck-grid-row.ck-grid-g-1 { --ck-grid-gutter: 0.25rem; }
+.ck-grid-row.ck-grid-g-2 { --ck-grid-gutter: 0.5rem; }
+.ck-grid-row.ck-grid-g-3 { --ck-grid-gutter: 1rem; }
+.ck-grid-row.ck-grid-g-4 { --ck-grid-gutter: 1.5rem; }
+.ck-grid-row.ck-grid-g-5 { --ck-grid-gutter: 3rem; }
+
+.ck-grid-row[class*="ck-grid-g-"] {
+    margin-left: calc(var(--ck-grid-gutter) * -0.5);
+    margin-right: calc(var(--ck-grid-gutter) * -0.5);
+}
+
+.ck-grid-row[class*="ck-grid-g-"] > [class*="ck-grid-col"] {
+    padding-left: calc(var(--ck-grid-gutter) * 0.5);
+    padding-right: calc(var(--ck-grid-gutter) * 0.5);
+    margin-bottom: var(--ck-grid-gutter);
+}
+
+[class*="ck-grid-col"] {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.ck-grid-col-1 { width: 8.3333%; }
+.ck-grid-col-2 { width: 16.6667%; }
+.ck-grid-col-3 { width: 25%; }
+.ck-grid-col-4 { width: 33.3333%; }
+.ck-grid-col-5 { width: 41.6667%; }
+.ck-grid-col-6 { width: 50%; }
+.ck-grid-col-7 { width: 58.3333%; }
+.ck-grid-col-8 { width: 66.6667%; }
+.ck-grid-col-9 { width: 75%; }
+.ck-grid-col-10 { width: 83.3333%; }
+.ck-grid-col-11 { width: 91.6667%; }
+.ck-grid-col-12 { width: 100%; }
+
+@media (min-width: 768px) {
+    .ck-grid-col-md-1 { width: 8.3333%; }
+    .ck-grid-col-md-2 { width: 16.6667%; }
+    .ck-grid-col-md-3 { width: 25%; }
+    .ck-grid-col-md-4 { width: 33.3333%; }
+    .ck-grid-col-md-5 { width: 41.6667%; }
+    .ck-grid-col-md-6 { width: 50%; }
+    .ck-grid-col-md-7 { width: 58.3333%; }
+    .ck-grid-col-md-8 { width: 66.6667%; }
+    .ck-grid-col-md-9 { width: 75%; }
+    .ck-grid-col-md-10 { width: 83.3333%; }
+    .ck-grid-col-md-11 { width: 91.6667%; }
+    .ck-grid-col-md-12 { width: 100%; }
+}
+
+@media (min-width: 992px) {
+    .ck-grid-col-lg-1 { width: 8.3333%; }
+    .ck-grid-col-lg-2 { width: 16.6667%; }
+    .ck-grid-col-lg-3 { width: 25%; }
+    .ck-grid-col-lg-4 { width: 33.3333%; }
+    .ck-grid-col-lg-5 { width: 41.6667%; }
+    .ck-grid-col-lg-6 { width: 50%; }
+    .ck-grid-col-lg-7 { width: 58.3333%; }
+    .ck-grid-col-lg-8 { width: 66.6667%; }
+    .ck-grid-col-lg-9 { width: 75%; }
+    .ck-grid-col-lg-10 { width: 83.3333%; }
+    .ck-grid-col-lg-11 { width: 91.6667%; }
+    .ck-grid-col-lg-12 { width: 100%; }
+}
+
+@media (min-width: 1200px) {
+    .ck-grid-col-xl-1 { width: 8.3333%; }
+    .ck-grid-col-xl-2 { width: 16.6667%; }
+    .ck-grid-col-xl-3 { width: 25%; }
+    .ck-grid-col-xl-4 { width: 33.3333%; }
+    .ck-grid-col-xl-5 { width: 41.6667%; }
+    .ck-grid-col-xl-6 { width: 50%; }
+    .ck-grid-col-xl-7 { width: 58.3333%; }
+    .ck-grid-col-xl-8 { width: 66.6667%; }
+    .ck-grid-col-xl-9 { width: 75%; }
+    .ck-grid-col-xl-10 { width: 83.3333%; }
+    .ck-grid-col-xl-11 { width: 91.6667%; }
+    .ck-grid-col-xl-12 { width: 100%; }
+}
+
+/* ============================================================
+   Editor visual indicators
+   ============================================================ */
+
+.ck-editor__editable .ck-grid-row {
+    outline: 2px dashed #ccc;
+}
+
+.ck-editor__editable .ck-grid-row > [class*="ck-grid-col"] {
+    border: 1px dashed #ddd;
+}
+
+/* ============================================================
+   Balloon Toolbar
+   ============================================================ */
+
+.ck-grid-layout-toolbar {
+    background: var(--ck-color-toolbar-background);
+    border: 1px solid var(--ck-color-toolbar-border);
+    border-radius: var(--ck-border-radius);
+    box-shadow: var(--ck-drop-shadow), 0 0;
+    min-width: 260px;
+}
+
+.ck-grid-toolbar-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 4px;
+    border-bottom: 1px solid var(--ck-color-toolbar-border);
+}
+
+.ck-grid-toolbar-row-last {
+    border-bottom: none;
+}
+
+.ck-grid-info {
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--ck-color-base-text);
+    padding: 4px 8px;
+    text-align: center;
+    width: 100%;
+    background: var(--ck-color-base-foreground);
+    border-radius: var(--ck-border-radius);
+}
+
+.ck-grid-controls {
+    display: flex;
+    gap: 1px;
+    justify-content: center;
+    width: 100%;
+}
+
+.ck-grid-layout-toolbar .ck-button.ck-grid-btn {
+    padding: 3px 10px !important;
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+    border: 1px solid transparent !important;
+    background: transparent !important;
+    border-radius: var(--ck-border-radius) !important;
+    cursor: pointer;
+    min-width: auto !important;
+    min-height: auto !important;
+    height: auto !important;
+    color: var(--ck-color-base-text) !important;
+}
+
+.ck-grid-layout-toolbar .ck-button.ck-grid-btn:hover {
+    background: var(--ck-color-button-default-hover-background) !important;
+}
+
+.ck-grid-layout-toolbar .ck-button.ck-grid-btn-danger {
+    color: #e53e3e !important;
+}
+
+/* ============================================================
+   Dialog
+   ============================================================ */
+
+.ck-grid-layout-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.ck-grid-layout-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.ck-grid-layout-form {
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+    padding: 24px;
+    min-width: 480px;
+    max-width: 640px;
+}
+
+.ck-grid-form-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.ck-grid-form-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.ck-grid-form-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+}
+
+.ck-grid-form-count-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.ck-grid-form-count-btn {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.ck-grid-form-count-btn:hover {
+    border-color: #1b9aee;
+    color: #1b9aee;
+}
+
+.ck-grid-form-count-btn.active {
+    background: #1b9aee;
+    color: #fff;
+    border-color: #1b9aee;
+}
+
+.ck-grid-form-help {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    background: #f7f7f7;
+    border-radius: 4px;
+}
+
+.ck-grid-form-table {
+    margin: 16px 0;
+}
+
+.ck-grid-form-table-row {
+    display: grid;
+    grid-template-columns: 56px repeat(4, 1fr);
+    column-gap: 8px;
+    row-gap: 8px;
+    padding: 6px 0;
+}
+
+.ck-grid-form-table-header {
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 8px;
+}
+
+.ck-grid-form-table-cell {
+    text-align: center;
+}
+
+.ck-grid-form-col-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    text-align: left;
+}
+
+.ck-grid-form-input {
+    width: 100%;
+    padding: 6px 4px;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    appearance: textfield;
+}
+
+.ck-grid-form-input:focus {
+    border-color: #1b9aee;
+    box-shadow: 0 0 0 2px rgba(27, 154, 238, 0.15);
+}
+
+.ck-grid-form-input::-webkit-inner-spin-button,
+.ck-grid-form-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.ck-grid-form-validation {
+    min-height: 20px;
+}
+
+.ck-grid-form-error {
+    color: #e53e3e;
+    font-size: 12px;
+    margin: 2px 0;
+}
+
+.ck-grid-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.ck-grid-form-btn {
+    padding: 8px 24px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    background: #fff;
+    color: #333;
+}
+
+.ck-grid-form-btn:hover {
+    border-color: #999;
+}
+
+.ck-grid-form-btn-submit {
+    background: #1b9aee;
+    color: #fff;
+    border-color: #1b9aee;
+}
+
+.ck-grid-form-btn-submit:hover {
+    background: #1589d6;
+}
+
+.ck-grid-form-btn-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

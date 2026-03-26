@@ -17,6 +17,29 @@ CKEditor 5に個別の追加機能や、機能の置き換えを行うための�
 
 詳細は [packages/container-block/README.md](packages/container-block/README.md) を参照してください。
 
+### Grid Layout（グリッドレイアウト）
+
+Bootstrap 5のグリッドシステムを利用したレスポンシブレイアウトを提供するプラグインです。HTML出力はBootstrap 5の `row` / `col-*` クラスをそのまま使用するため、表示側にBootstrap 5 CSSが読み込まれていれば追加CSSは不要です。
+
+**前提条件：** エディタ利用側およびコンテンツ表示側でBootstrap 5 CSSが読み込まれていること。
+
+**主な機能：**
+- ダイアログから列数（1〜6列）と各列のレスポンシブ幅を設定
+- Bootstrap 5の12カラムグリッド（合計12で比率指定）
+- レスポンシブブレークポイント対応（Default / MD>=768px / LG>=992px / XL>=1200px）
+- バルーンツールバーによるグリッドの編集・削除
+- 多言語対応（エディタの `language` 設定に連動）
+
+**出力HTML例：**
+
+```html
+<div class="row">
+  <div class="col-12 col-lg-5">...</div>
+  <div class="col-12 col-lg-3">...</div>
+  <div class="col-12 col-lg-4">...</div>
+</div>
+```
+
 ## ビルド
 
 ```bash

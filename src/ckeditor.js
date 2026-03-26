@@ -62,6 +62,7 @@ import {
 
 //import FontColor from '@packages/font-color/src/fontcolor.js';
 import ContainerBlock from '@packages/container-block/src/containerblock.js';
+import GridLayout from '@packages/grid-layout/src/gridlayout.js';
 
 //import CKEditorInspector from '@ckeditor/ckeditor5-inspector';
 
@@ -77,6 +78,7 @@ import neTranslations from 'ckeditor5/translations/ne.js';
 
 import 'ckeditor5/ckeditor5.css';
 import '@packages/container-block/theme/containerblock.css';
+import '@packages/grid-layout/theme/gridlayout.css';
 
 /**
  * Create a free account with a trial: https://portal.ckeditor.com/checkout?plan=free
@@ -94,6 +96,7 @@ Editor.builtinPlugins = [
     BlockQuote,
     Bold,
     ContainerBlock,
+    GridLayout,
     DataFilter,
     DataSchema,
     Essentials,
@@ -194,6 +197,7 @@ Editor.defaultConfig = {
             'imageInsert',
             'insertTable',
             'containerBlock',
+            'gridLayout',
             'mediaEmbed',
             '|',
             'blockQuote',
