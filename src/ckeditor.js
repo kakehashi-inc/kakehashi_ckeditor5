@@ -65,7 +65,15 @@ import ContainerBlock from '@packages/container-block/src/containerblock.js';
 
 //import CKEditorInspector from '@ckeditor/ckeditor5-inspector';
 
-import translations from 'ckeditor5/translations/ja.js';
+import jaTranslations from 'ckeditor5/translations/ja.js';
+import enTranslations from 'ckeditor5/translations/en.js';
+import zhCnTranslations from 'ckeditor5/translations/zh-cn.js';
+import koTranslations from 'ckeditor5/translations/ko.js';
+import ptBrTranslations from 'ckeditor5/translations/pt-br.js';
+import viTranslations from 'ckeditor5/translations/vi.js';
+import thTranslations from 'ckeditor5/translations/th.js';
+import idTranslations from 'ckeditor5/translations/id.js';
+import neTranslations from 'ckeditor5/translations/ne.js';
 
 import 'ckeditor5/ckeditor5.css';
 import '@packages/container-block/theme/containerblock.css';
@@ -140,7 +148,17 @@ Editor.builtinPlugins = [
 Editor.defaultConfig = {
     language: 'ja',
     licenseKey: LICENSE_KEY,
-    translations: [translations],
+    translations: [
+        jaTranslations,
+        enTranslations,
+        zhCnTranslations,
+        koTranslations,
+        ptBrTranslations,
+        viTranslations,
+        thTranslations,
+        idTranslations,
+        neTranslations,
+    ],
     toolbar: {
         items: [
             'heading',
