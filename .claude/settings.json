@@ -10,7 +10,8 @@
       "Bash(glob:*)",
       "Bash(ls:*)",
       "Bash(wc:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(yarn build:*)"
     ],
     "deny": [],
     "ask": []
