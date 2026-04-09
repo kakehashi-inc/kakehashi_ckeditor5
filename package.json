@@ -8,7 +8,8 @@
   "main": "./build/ckeditor.js",
   "files": [
     "build",
-    "sample"
+    "sample",
+    "sample-code"
   ],
   "engines": {
     "node": ">=22.0.0",

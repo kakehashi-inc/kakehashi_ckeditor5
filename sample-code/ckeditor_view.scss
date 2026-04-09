@@ -1,17 +1,7 @@
 @charset "utf-8";
 
-// mdbのスタイルの無効化
+// スタイルの無効化
 .wysiwyg {
-    a:not(.sidenav-link):not(.btn):not(.dropdown-item):not(.nav-link):not(.navbar-brand):not(.page-link):not(
-            .carousel-control-prev
-        ):not(.carousel-control-next) {
-        color: var(--mdb-primary);
-    }
-    a:not(.sidenav-link):not(.btn):not(.dropdown-item):not(.nav-link):not(.navbar-brand):not(.page-link):not(
-            .carousel-control-prev
-        ):not(.carousel-control-next):hover {
-        color: var(--mdb-primary);
-    }
     a {
         text-decoration: underline;
     }

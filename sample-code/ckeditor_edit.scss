@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+// スタイルの無効化
+.wysiwyg {
+    a {
+        text-decoration: underline;
+    }
+
+    mark,
+    .mark {
+        padding: inherit;
+    }
+
+    hr {
+        color: inherit;
+        opacity: inherit;
+    }
+
+    .table {
+        width: inherit;
+        margin-bottom: inherit;
+        color: inherit;
+        background: inherit;
+        vertical-align: inherit;
+        border-color: inherit;
+        font-size: inherit;
+
+        > :not(caption) > * > * {
+            padding: inherit;
+            background-color: inherit;
+            border-bottom-width: inherit;
+            box-shadow: inherit;
+        }
+
+        > tbody {
+            vertical-align: inherit;
+        }
+
+        > thead {
+            vertical-align: inherit;
+        }
+
+        > :not(:first-child) {
+            border-top: inherit;
+        }
+    }
+}
