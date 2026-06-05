@@ -3,7 +3,6 @@ import ContainerBlockCommand from './containerblockcommand';
 import { CONTAINER_BLOCK, ALIGNMENTS } from './constants';
 
 export default class ContainerBlockEditing extends Plugin {
-
     static get pluginName() {
         return 'ContainerBlockEditing';
     }
@@ -24,7 +23,7 @@ export default class ContainerBlockEditing extends Plugin {
             isBlock: true,
             allowWhere: '$block',
             allowContentOf: '$root',
-            allowAttributes: ['width', 'alignment']
+            allowAttributes: ['width', 'alignment'],
         });
     }
 
@@ -36,21 +35,24 @@ export default class ContainerBlockEditing extends Plugin {
         conversion.for('upcast').elementToElement({
             view: {
                 name: 'div',
-                classes: 'container-block'
+                classes: 'container-block',
             },
             model: (viewElement, { writer }) => {
                 const styleAttr = viewElement.getAttribute('style') || '';
                 const widthMatch = styleAttr.match(/width:\s*(\d+)%/);
                 const width = widthMatch ? parseInt(widthMatch[1]) : 100;
 
-                const marginLeft = styleAttr.includes('margin-left: 0') ? 'left' :
-                                 styleAttr.includes('margin-right: 0') ? 'right' : 'center';
+                const marginLeft = styleAttr.includes('margin-left: 0')
+                    ? 'left'
+                    : styleAttr.includes('margin-right: 0')
+                      ? 'right'
+                      : 'center';
 
                 return writer.createElement('containerBlock', {
                     width,
-                    alignment: marginLeft
+                    alignment: marginLeft,
                 });
-            }
+            },
         });
 
         // Data downcast converter
@@ -64,9 +66,9 @@ export default class ContainerBlockEditing extends Plugin {
 
                 return writer.createContainerElement('div', {
                     class: 'container-block',
-                    style: `width: ${width}%; margin-left: ${alignmentConfig.marginLeft}; margin-right: ${alignmentConfig.marginRight};`
+                    style: `width: ${width}%; margin-left: ${alignmentConfig.marginLeft}; margin-right: ${alignmentConfig.marginRight};`,
                 });
-            }
+            },
         });
 
         // Editing downcast converter - simple container without widget
@@ -82,21 +84,25 @@ export default class ContainerBlockEditing extends Plugin {
                     class: 'container-block',
                     style: `width: ${width}%; margin-left: ${alignmentConfig.marginLeft}; margin-right: ${alignmentConfig.marginRight};`,
                     'data-width': width,
-                    'data-alignment': alignment
+                    'data-alignment': alignment,
                 });
 
                 // Add resize handle
-                const handle = writer.createUIElement('div', {
-                    class: 'ck-container-resize-handle'
-                }, function(domDocument) {
-                    const domElement = this.toDomElement(domDocument);
-                    return domElement;
-                });
+                const handle = writer.createUIElement(
+                    'div',
+                    {
+                        class: 'ck-container-resize-handle',
+                    },
+                    function (domDocument) {
+                        const domElement = this.toDomElement(domDocument);
+                        return domElement;
+                    }
+                );
 
                 writer.insert(writer.createPositionAt(div, 'end'), handle);
 
                 return div;
-            }
+            },
         });
 
         // Attribute converters for editing view
@@ -113,7 +119,8 @@ export default class ContainerBlockEditing extends Plugin {
                 const alignment = data.item.getAttribute('alignment') || 'center';
                 const alignmentConfig = ALIGNMENTS.find(a => a.value === alignment);
 
-                viewWriter.setAttribute('style',
+                viewWriter.setAttribute(
+                    'style',
                     `width: ${width}%; margin-left: ${alignmentConfig.marginLeft}; margin-right: ${alignmentConfig.marginRight};`,
                     viewElement
                 );
@@ -132,7 +139,8 @@ export default class ContainerBlockEditing extends Plugin {
                 const alignment = data.attributeNewValue || 'center';
                 const alignmentConfig = ALIGNMENTS.find(a => a.value === alignment);
 
-                viewWriter.setAttribute('style',
+                viewWriter.setAttribute(
+                    'style',
                     `width: ${width}%; margin-left: ${alignmentConfig.marginLeft}; margin-right: ${alignmentConfig.marginRight};`,
                     viewElement
                 );

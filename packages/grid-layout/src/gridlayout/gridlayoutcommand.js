@@ -177,10 +177,7 @@ export default class GridLayoutCommand extends Command {
                     const colToRemove = existingCols[i];
                     const children = Array.from(colToRemove.getChildren());
                     children.forEach(child => {
-                        writer.move(
-                            writer.createRangeOn(child),
-                            writer.createPositionAt(lastKeepCol, 'end')
-                        );
+                        writer.move(writer.createRangeOn(child), writer.createPositionAt(lastKeepCol, 'end'));
                     });
                     writer.remove(colToRemove);
                 }

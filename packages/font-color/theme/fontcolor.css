@@ -4,18 +4,18 @@
  */
 
 .ck .ck-button.ck-color-table__remove-color {
-	display: flex;
-	align-items: center;
-	width: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
-.ck .ck.ck-color-input{
-	margin: 5px 8px;
-	border-radius: 2px;
-	width: calc(100% - 16px);
-	padding: 0 5px;
+.ck .ck.ck-color-input {
+    margin: 5px 8px;
+    border-radius: 2px;
+    width: calc(100% - 16px);
+    padding: 0 5px;
 }
 
 label.ck.ck-color-grid__label {
-	font-weight: unset;
+    font-weight: unset;
 }

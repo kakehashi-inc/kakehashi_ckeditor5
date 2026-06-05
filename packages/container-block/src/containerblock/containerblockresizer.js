@@ -37,7 +37,7 @@ export default class ContainerBlockResizer extends Plugin {
         // Get parent width for percentage calculation
         const parentWidth = containerDom.parentElement.offsetWidth;
 
-        const onMouseMove = (moveEvent) => {
+        const onMouseMove = moveEvent => {
             const deltaX = moveEvent.clientX - startX;
             const deltaPercent = (deltaX / parentWidth) * 100;
             let newWidth = startWidth + deltaPercent;

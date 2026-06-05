@@ -25,10 +25,12 @@ export default class GridLayoutToolbarView extends View {
         infoRow.setTemplate({
             tag: 'div',
             attributes: { class: ['ck-grid-toolbar-row'] },
-            children: [{
-                tag: 'span',
-                attributes: { class: ['ck-grid-info'] },
-            }],
+            children: [
+                {
+                    tag: 'span',
+                    attributes: { class: ['ck-grid-info'] },
+                },
+            ],
         });
         this.children.add(infoRow);
 
@@ -37,11 +39,13 @@ export default class GridLayoutToolbarView extends View {
         rowOpsRow.setTemplate({
             tag: 'div',
             attributes: { class: ['ck-grid-toolbar-row'] },
-            children: [{
-                tag: 'div',
-                attributes: { class: ['ck-grid-controls'] },
-                children: this._createRowButtons(),
-            }],
+            children: [
+                {
+                    tag: 'div',
+                    attributes: { class: ['ck-grid-controls'] },
+                    children: this._createRowButtons(),
+                },
+            ],
         });
         this.children.add(rowOpsRow);
 
@@ -50,11 +54,13 @@ export default class GridLayoutToolbarView extends View {
         insertRow.setTemplate({
             tag: 'div',
             attributes: { class: ['ck-grid-toolbar-row', 'ck-grid-toolbar-row-last'] },
-            children: [{
-                tag: 'div',
-                attributes: { class: ['ck-grid-controls'] },
-                children: this._createInsertButtons(),
-            }],
+            children: [
+                {
+                    tag: 'div',
+                    attributes: { class: ['ck-grid-controls'] },
+                    children: this._createInsertButtons(),
+                },
+            ],
         });
         this.children.add(insertRow);
     }
@@ -98,9 +104,7 @@ export default class GridLayoutToolbarView extends View {
         if (!this.element) return;
         const el = this.element.querySelector('.ck-grid-info');
         if (el) {
-            el.innerHTML = lines.map(line =>
-                line.replace(/&/g, '&amp;').replace(/</g, '&lt;')
-            ).join('<br>');
+            el.innerHTML = lines.map(line => line.replace(/&/g, '&amp;').replace(/</g, '&lt;')).join('<br>');
         }
     }
 

@@ -18,9 +18,9 @@ export default class ContainerBlockToolbarView extends View {
             tag: 'div',
             attributes: {
                 class: ['ck', 'ck-container-block-toolbar'],
-                tabindex: '-1'
+                tabindex: '-1',
             },
-            children: this.children
+            children: this.children,
         });
     }
 
@@ -32,21 +32,21 @@ export default class ContainerBlockToolbarView extends View {
         infoRow.setTemplate({
             tag: 'div',
             attributes: {
-                class: ['ck-container-toolbar-row']
+                class: ['ck-container-toolbar-row'],
             },
             children: [
                 {
                     tag: 'span',
                     attributes: {
-                        class: ['ck-container-info']
+                        class: ['ck-container-info'],
                     },
                     children: [
                         {
-                            text: bind.to('width', w => `幅: ${w}%`)
-                        }
-                    ]
-                }
-            ]
+                            text: bind.to('width', w => `幅: ${w}%`),
+                        },
+                    ],
+                },
+            ],
         });
         this.children.add(infoRow);
 
@@ -58,24 +58,24 @@ export default class ContainerBlockToolbarView extends View {
         controlsRow.setTemplate({
             tag: 'div',
             attributes: {
-                class: ['ck-container-toolbar-row']
+                class: ['ck-container-toolbar-row'],
             },
             children: [
                 {
                     tag: 'div',
                     attributes: {
-                        class: ['ck-container-controls']
+                        class: ['ck-container-controls'],
                     },
-                    children: widthButtons
+                    children: widthButtons,
                 },
                 {
                     tag: 'div',
                     attributes: {
-                        class: ['ck-container-controls']
+                        class: ['ck-container-controls'],
                     },
-                    children: alignmentButtons
-                }
-            ]
+                    children: alignmentButtons,
+                },
+            ],
         });
         this.children.add(controlsRow);
 
@@ -86,17 +86,17 @@ export default class ContainerBlockToolbarView extends View {
         insertRow.setTemplate({
             tag: 'div',
             attributes: {
-                class: ['ck-container-toolbar-row']
+                class: ['ck-container-toolbar-row'],
             },
             children: [
                 {
                     tag: 'div',
                     attributes: {
-                        class: ['ck-container-controls', 'ck-container-insert-controls']
+                        class: ['ck-container-controls', 'ck-container-insert-controls'],
                     },
-                    children: insertButtons
-                }
-            ]
+                    children: insertButtons,
+                },
+            ],
         });
         this.children.add(insertRow);
     }
@@ -108,7 +108,7 @@ export default class ContainerBlockToolbarView extends View {
             button.set({
                 label: preset.label,
                 withText: true,
-                class: 'ck-container-preset-button'
+                class: 'ck-container-preset-button',
             });
 
             button.on('execute', () => {
@@ -128,7 +128,7 @@ export default class ContainerBlockToolbarView extends View {
             button.set({
                 label: align.label,
                 withText: true,
-                class: 'ck-container-align-button'
+                class: 'ck-container-align-button',
             });
 
             button.on('execute', () => {
@@ -149,7 +149,7 @@ export default class ContainerBlockToolbarView extends View {
         insertBeforeButton.set({
             label: '前に段落を追加',
             withText: true,
-            class: 'ck-container-insert-button'
+            class: 'ck-container-insert-button',
         });
 
         insertBeforeButton.on('execute', () => {
@@ -162,7 +162,7 @@ export default class ContainerBlockToolbarView extends View {
         insertAfterButton.set({
             label: '後に段落を追加',
             withText: true,
-            class: 'ck-container-insert-button'
+            class: 'ck-container-insert-button',
         });
 
         insertAfterButton.on('execute', () => {

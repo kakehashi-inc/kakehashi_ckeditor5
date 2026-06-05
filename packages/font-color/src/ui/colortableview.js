@@ -10,17 +10,7 @@ import ButtonView from '@ckeditor/ckeditor5-ui/src/button/buttonview';
 import ColorInputView from './colorinputview';
 
 export default class ColorTableView extends View {
-    constructor(
-        locale,
-        {
-            exactColors,
-            themeColors,
-            columns,
-            closeButtonLabel,
-            removeButtonLabel,
-            themeColorsLabel,
-        }
-    ) {
+    constructor(locale, { exactColors, themeColors, columns, closeButtonLabel, removeButtonLabel, themeColorsLabel }) {
         super(locale);
 
         this.items = this.createCollection();

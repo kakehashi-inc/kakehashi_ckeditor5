@@ -28,9 +28,7 @@ export default class GridLayoutFormView extends View {
     show(options = {}) {
         this._columnCount = options.columnCount || 2;
         this._gutter = options.gutter != null ? options.gutter : DEFAULT_GUTTER;
-        this._configs = options.configs
-            ? options.configs.map(c => ({ ...c }))
-            : this._defaultConfigs();
+        this._configs = options.configs ? options.configs.map(c => ({ ...c })) : this._defaultConfigs();
         this._isEdit = !!options.isEdit;
         this._buildForm();
         this.element.style.display = 'flex';
@@ -43,7 +41,10 @@ export default class GridLayoutFormView extends View {
 
     _defaultConfigs() {
         return Array.from({ length: this._columnCount }, () => ({
-            colDefault: 12, colMd: '', colLg: '', colXl: '',
+            colDefault: 12,
+            colMd: '',
+            colLg: '',
+            colXl: '',
         }));
     }
 
@@ -211,9 +212,8 @@ export default class GridLayoutFormView extends View {
                 input.min = '1';
                 input.max = '12';
                 input.className = 'ck-grid-form-input';
-                input.value = this._configs[i][key] !== '' && this._configs[i][key] != null
-                    ? this._configs[i][key]
-                    : '';
+                input.value =
+                    this._configs[i][key] !== '' && this._configs[i][key] != null ? this._configs[i][key] : '';
 
                 if (key === 'colDefault') {
                     input.placeholder = '12';
@@ -255,9 +255,7 @@ export default class GridLayoutFormView extends View {
             const hasAny = values.some(v => v !== '' && v != null);
 
             if (hasAny) {
-                const allFilled = values.every(
-                    v => v !== '' && v != null && v >= 1 && v <= 12
-                );
+                const allFilled = values.every(v => v !== '' && v != null && v >= 1 && v <= 12);
 
                 if (!allFilled) {
                     errors.push(`${label}: ${t('all columns must have a value (1-12)')}`);

@@ -32,7 +32,7 @@ export default class ContainerBlockUI extends Plugin {
             button.set({
                 label: 'コンテナブロック',
                 icon: containerBlockIcon,
-                tooltip: true
+                tooltip: true,
             });
 
             button.bind('isEnabled').to(command, 'isEnabled');
@@ -143,7 +143,7 @@ export default class ContainerBlockUI extends Plugin {
 
         this._balloon.add({
             view: this.toolbarView,
-            position: this._getBalloonPositionData()
+            position: this._getBalloonPositionData(),
         });
     }
 
@@ -164,7 +164,7 @@ export default class ContainerBlockUI extends Plugin {
         const containerElement = this._getSelectedContainerElement();
 
         return {
-            target: view.domConverter.mapViewToDom(containerElement)
+            target: view.domConverter.mapViewToDom(containerElement),
         };
     }
 

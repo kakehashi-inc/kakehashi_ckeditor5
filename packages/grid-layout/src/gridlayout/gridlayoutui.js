@@ -18,7 +18,7 @@ export default class GridLayoutUI extends Plugin {
     init() {
         const editor = this.editor;
         const langConfig = editor.config.get('language') || 'ja';
-        const lang = typeof langConfig === 'string' ? langConfig : (langConfig.ui || 'ja');
+        const lang = typeof langConfig === 'string' ? langConfig : langConfig.ui || 'ja';
 
         this._i18n = i18next.createInstance();
         this._i18n.init({

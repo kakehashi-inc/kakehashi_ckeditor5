@@ -19,10 +19,12 @@ export default class ContainerBlockCommand extends Command {
         }
 
         this.isEnabled = true;
-        this.value = containerBlock ? {
-            width: containerBlock.getAttribute('width'),
-            alignment: containerBlock.getAttribute('alignment')
-        } : null;
+        this.value = containerBlock
+            ? {
+                  width: containerBlock.getAttribute('width'),
+                  alignment: containerBlock.getAttribute('alignment'),
+              }
+            : null;
     }
 
     execute(options = {}) {
@@ -73,7 +75,7 @@ export default class ContainerBlockCommand extends Command {
                 // Create container block
                 const containerBlock = writer.createElement('containerBlock', {
                     width,
-                    alignment
+                    alignment,
                 });
 
                 // Insert container before the block

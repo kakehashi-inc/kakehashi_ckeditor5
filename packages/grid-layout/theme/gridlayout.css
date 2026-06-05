@@ -7,85 +7,193 @@
     flex-wrap: wrap;
 }
 
-.ck-grid-row.ck-grid-g-0 { --ck-grid-gutter: 0; }
-.ck-grid-row.ck-grid-g-1 { --ck-grid-gutter: 0.25rem; }
-.ck-grid-row.ck-grid-g-2 { --ck-grid-gutter: 0.5rem; }
-.ck-grid-row.ck-grid-g-3 { --ck-grid-gutter: 1rem; }
-.ck-grid-row.ck-grid-g-4 { --ck-grid-gutter: 1.5rem; }
-.ck-grid-row.ck-grid-g-5 { --ck-grid-gutter: 3rem; }
+.ck-grid-row.ck-grid-g-0 {
+    --ck-grid-gutter: 0;
+}
+.ck-grid-row.ck-grid-g-1 {
+    --ck-grid-gutter: 0.25rem;
+}
+.ck-grid-row.ck-grid-g-2 {
+    --ck-grid-gutter: 0.5rem;
+}
+.ck-grid-row.ck-grid-g-3 {
+    --ck-grid-gutter: 1rem;
+}
+.ck-grid-row.ck-grid-g-4 {
+    --ck-grid-gutter: 1.5rem;
+}
+.ck-grid-row.ck-grid-g-5 {
+    --ck-grid-gutter: 3rem;
+}
 
-.ck-grid-row[class*="ck-grid-g-"] {
+.ck-grid-row[class*='ck-grid-g-'] {
     margin-left: calc(var(--ck-grid-gutter) * -0.5);
     margin-right: calc(var(--ck-grid-gutter) * -0.5);
 }
 
-.ck-grid-row[class*="ck-grid-g-"] > [class*="ck-grid-col"] {
+.ck-grid-row[class*='ck-grid-g-'] > [class*='ck-grid-col'] {
     padding-left: calc(var(--ck-grid-gutter) * 0.5);
     padding-right: calc(var(--ck-grid-gutter) * 0.5);
     margin-bottom: var(--ck-grid-gutter);
 }
 
-[class*="ck-grid-col"] {
+[class*='ck-grid-col'] {
     box-sizing: border-box;
     width: 100%;
 }
 
-.ck-grid-col-1 { width: 8.3333%; }
-.ck-grid-col-2 { width: 16.6667%; }
-.ck-grid-col-3 { width: 25%; }
-.ck-grid-col-4 { width: 33.3333%; }
-.ck-grid-col-5 { width: 41.6667%; }
-.ck-grid-col-6 { width: 50%; }
-.ck-grid-col-7 { width: 58.3333%; }
-.ck-grid-col-8 { width: 66.6667%; }
-.ck-grid-col-9 { width: 75%; }
-.ck-grid-col-10 { width: 83.3333%; }
-.ck-grid-col-11 { width: 91.6667%; }
-.ck-grid-col-12 { width: 100%; }
+.ck-grid-col-1 {
+    width: 8.3333%;
+}
+.ck-grid-col-2 {
+    width: 16.6667%;
+}
+.ck-grid-col-3 {
+    width: 25%;
+}
+.ck-grid-col-4 {
+    width: 33.3333%;
+}
+.ck-grid-col-5 {
+    width: 41.6667%;
+}
+.ck-grid-col-6 {
+    width: 50%;
+}
+.ck-grid-col-7 {
+    width: 58.3333%;
+}
+.ck-grid-col-8 {
+    width: 66.6667%;
+}
+.ck-grid-col-9 {
+    width: 75%;
+}
+.ck-grid-col-10 {
+    width: 83.3333%;
+}
+.ck-grid-col-11 {
+    width: 91.6667%;
+}
+.ck-grid-col-12 {
+    width: 100%;
+}
 
 @media (min-width: 768px) {
-    .ck-grid-col-md-1 { width: 8.3333%; }
-    .ck-grid-col-md-2 { width: 16.6667%; }
-    .ck-grid-col-md-3 { width: 25%; }
-    .ck-grid-col-md-4 { width: 33.3333%; }
-    .ck-grid-col-md-5 { width: 41.6667%; }
-    .ck-grid-col-md-6 { width: 50%; }
-    .ck-grid-col-md-7 { width: 58.3333%; }
-    .ck-grid-col-md-8 { width: 66.6667%; }
-    .ck-grid-col-md-9 { width: 75%; }
-    .ck-grid-col-md-10 { width: 83.3333%; }
-    .ck-grid-col-md-11 { width: 91.6667%; }
-    .ck-grid-col-md-12 { width: 100%; }
+    .ck-grid-col-md-1 {
+        width: 8.3333%;
+    }
+    .ck-grid-col-md-2 {
+        width: 16.6667%;
+    }
+    .ck-grid-col-md-3 {
+        width: 25%;
+    }
+    .ck-grid-col-md-4 {
+        width: 33.3333%;
+    }
+    .ck-grid-col-md-5 {
+        width: 41.6667%;
+    }
+    .ck-grid-col-md-6 {
+        width: 50%;
+    }
+    .ck-grid-col-md-7 {
+        width: 58.3333%;
+    }
+    .ck-grid-col-md-8 {
+        width: 66.6667%;
+    }
+    .ck-grid-col-md-9 {
+        width: 75%;
+    }
+    .ck-grid-col-md-10 {
+        width: 83.3333%;
+    }
+    .ck-grid-col-md-11 {
+        width: 91.6667%;
+    }
+    .ck-grid-col-md-12 {
+        width: 100%;
+    }
 }
 
 @media (min-width: 992px) {
-    .ck-grid-col-lg-1 { width: 8.3333%; }
-    .ck-grid-col-lg-2 { width: 16.6667%; }
-    .ck-grid-col-lg-3 { width: 25%; }
-    .ck-grid-col-lg-4 { width: 33.3333%; }
-    .ck-grid-col-lg-5 { width: 41.6667%; }
-    .ck-grid-col-lg-6 { width: 50%; }
-    .ck-grid-col-lg-7 { width: 58.3333%; }
-    .ck-grid-col-lg-8 { width: 66.6667%; }
-    .ck-grid-col-lg-9 { width: 75%; }
-    .ck-grid-col-lg-10 { width: 83.3333%; }
-    .ck-grid-col-lg-11 { width: 91.6667%; }
-    .ck-grid-col-lg-12 { width: 100%; }
+    .ck-grid-col-lg-1 {
+        width: 8.3333%;
+    }
+    .ck-grid-col-lg-2 {
+        width: 16.6667%;
+    }
+    .ck-grid-col-lg-3 {
+        width: 25%;
+    }
+    .ck-grid-col-lg-4 {
+        width: 33.3333%;
+    }
+    .ck-grid-col-lg-5 {
+        width: 41.6667%;
+    }
+    .ck-grid-col-lg-6 {
+        width: 50%;
+    }
+    .ck-grid-col-lg-7 {
+        width: 58.3333%;
+    }
+    .ck-grid-col-lg-8 {
+        width: 66.6667%;
+    }
+    .ck-grid-col-lg-9 {
+        width: 75%;
+    }
+    .ck-grid-col-lg-10 {
+        width: 83.3333%;
+    }
+    .ck-grid-col-lg-11 {
+        width: 91.6667%;
+    }
+    .ck-grid-col-lg-12 {
+        width: 100%;
+    }
 }
 
 @media (min-width: 1200px) {
-    .ck-grid-col-xl-1 { width: 8.3333%; }
-    .ck-grid-col-xl-2 { width: 16.6667%; }
-    .ck-grid-col-xl-3 { width: 25%; }
-    .ck-grid-col-xl-4 { width: 33.3333%; }
-    .ck-grid-col-xl-5 { width: 41.6667%; }
-    .ck-grid-col-xl-6 { width: 50%; }
-    .ck-grid-col-xl-7 { width: 58.3333%; }
-    .ck-grid-col-xl-8 { width: 66.6667%; }
-    .ck-grid-col-xl-9 { width: 75%; }
-    .ck-grid-col-xl-10 { width: 83.3333%; }
-    .ck-grid-col-xl-11 { width: 91.6667%; }
-    .ck-grid-col-xl-12 { width: 100%; }
+    .ck-grid-col-xl-1 {
+        width: 8.3333%;
+    }
+    .ck-grid-col-xl-2 {
+        width: 16.6667%;
+    }
+    .ck-grid-col-xl-3 {
+        width: 25%;
+    }
+    .ck-grid-col-xl-4 {
+        width: 33.3333%;
+    }
+    .ck-grid-col-xl-5 {
+        width: 41.6667%;
+    }
+    .ck-grid-col-xl-6 {
+        width: 50%;
+    }
+    .ck-grid-col-xl-7 {
+        width: 58.3333%;
+    }
+    .ck-grid-col-xl-8 {
+        width: 66.6667%;
+    }
+    .ck-grid-col-xl-9 {
+        width: 75%;
+    }
+    .ck-grid-col-xl-10 {
+        width: 83.3333%;
+    }
+    .ck-grid-col-xl-11 {
+        width: 91.6667%;
+    }
+    .ck-grid-col-xl-12 {
+        width: 100%;
+    }
 }
 
 /* ============================================================
@@ -96,7 +204,7 @@
     outline: 2px dashed #ccc;
 }
 
-.ck-editor__editable .ck-grid-row > [class*="ck-grid-col"] {
+.ck-editor__editable .ck-grid-row > [class*='ck-grid-col'] {
     border: 1px dashed #ddd;
 }
 
@@ -108,7 +216,9 @@
     background: var(--ck-color-toolbar-background);
     border: 1px solid var(--ck-color-toolbar-border);
     border-radius: var(--ck-border-radius);
-    box-shadow: var(--ck-drop-shadow), 0 0;
+    box-shadow:
+        var(--ck-drop-shadow),
+        0 0;
     min-width: 260px;
 }
 

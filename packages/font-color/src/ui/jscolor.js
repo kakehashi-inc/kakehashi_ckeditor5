@@ -331,8 +331,8 @@ var jsc = {
                             ? tp[b] + ts[b] - l - l * c
                             : tp[b] + ts[b] - l + l * c
                         : tp[b] + ts[b] - l + l * c >= 0
-                        ? tp[b] + ts[b] - l + l * c
-                        : tp[b] + ts[b] - l - l * c,
+                          ? tp[b] + ts[b] - l + l * c
+                          : tp[b] + ts[b] - l - l * c,
                 ];
             }
 

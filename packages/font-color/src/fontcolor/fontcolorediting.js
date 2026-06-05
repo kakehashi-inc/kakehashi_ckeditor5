@@ -48,10 +48,10 @@ function renderDowncastElement(themeColors) {
                   style: `color:${themeColor.color}`,
               }
             : modelAttributeValue
-            ? {
-                  style: `color:${modelAttributeValue}`,
-              }
-            : {};
+              ? {
+                    style: `color:${modelAttributeValue}`,
+                }
+              : {};
         return writer.createAttributeElement('span', attributes, {
             priority: 7,
         });

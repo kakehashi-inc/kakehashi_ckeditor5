@@ -112,28 +112,32 @@ export default class GridLayoutEditing extends Plugin {
         // ===================== gridCol =====================
 
         conversion.for('upcast').add(dispatcher => {
-            dispatcher.on('element:div', (evt, data, conversionApi) => {
-                const viewElement = data.viewItem;
+            dispatcher.on(
+                'element:div',
+                (evt, data, conversionApi) => {
+                    const viewElement = data.viewItem;
 
-                if (!conversionApi.consumable.test(viewElement, { name: true })) {
-                    return;
-                }
+                    if (!conversionApi.consumable.test(viewElement, { name: true })) {
+                        return;
+                    }
 
-                const classNames = Array.from(viewElement.getClassNames());
-                const hasColClass = classNames.some(cls => cls.startsWith(CLS_COL));
-                if (!hasColClass) return;
+                    const classNames = Array.from(viewElement.getClassNames());
+                    const hasColClass = classNames.some(cls => cls.startsWith(CLS_COL));
+                    if (!hasColClass) return;
 
-                const attrs = parseColClasses(classNames);
-                const modelElement = conversionApi.writer.createElement(GRID_COL, attrs);
+                    const attrs = parseColClasses(classNames);
+                    const modelElement = conversionApi.writer.createElement(GRID_COL, attrs);
 
-                if (!conversionApi.safeInsert(modelElement, data.modelCursor)) {
-                    return;
-                }
+                    if (!conversionApi.safeInsert(modelElement, data.modelCursor)) {
+                        return;
+                    }
 
-                conversionApi.consumable.consume(viewElement, { name: true });
-                conversionApi.convertChildren(viewElement, modelElement);
-                conversionApi.updateConversionResult(modelElement, data);
-            }, { priority: 'normal' });
+                    conversionApi.consumable.consume(viewElement, { name: true });
+                    conversionApi.convertChildren(viewElement, modelElement);
+                    conversionApi.updateConversionResult(modelElement, data);
+                },
+                { priority: 'normal' }
+            );
         });
 
         conversion.for('dataDowncast').elementToElement({
