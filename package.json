@@ -18,29 +18,35 @@
     "pnpm": "please-use-yarn"
   },
   "scripts": {
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "format": "prettier --write \"packages/**/*.{js,css}\"",
+    "eslint": "eslint packages",
+    "eslint:fix": "eslint packages --fix"
   },
   "devDependencies": {
-    "ckeditor5": "^48.0.0",
     "css-loader": "^7.1.4",
     "eslint": "^9.39.4",
-    "eslint-config-ckeditor5": "^14.0.0",
+    "eslint-config-ckeditor5": "^15.1.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-prettier": "^5.5.6",
     "eslint-plugin-standard": "^5.0.0",
-    "i18next": "^26.0.4",
-    "postcss": "^8.5.9",
+    "postcss": "^8.5.15",
     "postcss-loader": "^8.2.1",
-    "postcss-preset-env": "^11.2.0",
-    "prettier": "^3.8.1",
+    "postcss-preset-env": "^11.3.0",
+    "prettier": "^3.8.3",
     "prettier-eslint": "^16.4.2",
     "prettier-eslint-cli": "^8.0.1",
     "raw-loader": "^4.0.2",
     "style-loader": "^4.0.0",
-    "terser-webpack-plugin": "^5.4.0",
-    "webpack": "^5.106.0",
-    "webpack-cli": "^6.0.1"
+    "terser-webpack-plugin": "^5.6.1",
+    "typescript": "^5.9.3",
+    "webpack": "^5.107.2",
+    "webpack-cli": "^7.0.3"
+  },
+  "dependencies": {
+    "ckeditor5": "^48.2.0",
+    "i18next": "^26.3.1"
   }
 }

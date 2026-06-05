@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "jsx": "react-jsx",
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "strict": false,
+        "noImplicitThis": true,
+        "esModuleInterop": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": true,
+        "paths": {},
+        "typeRoots": [
+            "./node_modules/@types",
+        ]
+    },
+    "include": []
+}

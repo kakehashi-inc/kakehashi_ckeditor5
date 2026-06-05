@@ -305,7 +305,10 @@ Editor.defaultConfig = {
                 styles: true,
             },
             {
-                name: /^(p|h[1-6])$/,
+                name: /^(p|h[1-6]|span|hr|ul|ol|li|figure|figcaption|blockquote|dl|dt|dd|table|thead|tbody|tfoot|tr|td|th|caption|colgroup|col|mark|code)$/,
+                attributes: {
+                    id: true,
+                },
                 classes: true,
                 styles: true,
             },
@@ -314,6 +317,7 @@ Editor.defaultConfig = {
                 attributes: {
                     target: true,
                     name: true,
+                    id: true,
                 },
                 classes: true,
                 styles: true,
@@ -342,12 +346,24 @@ Editor.defaultConfig = {
                 styles: true,
             },
             {
-                name: /^(span|br|figure|figcaption|hr|ul|li)$/,
+                name: 'br',
                 classes: true,
                 styles: true,
             },
             {
-                name: /^(b|i|u|pre|s|small|strong|sub|sup|details|summary)$/,
+                name: /^(b|i|u|pre|s|small|strong|sub|sup|details|summary|ins|kbd|samp|var|cite|wbr)$/,
+            },
+            {
+                name: 'time',
+                attributes: {
+                    datetime: true,
+                },
+            },
+            {
+                name: 'abbr',
+                attributes: {
+                    title: true,
+                },
             },
             {
                 name: /^(q|blockquote)$/,
