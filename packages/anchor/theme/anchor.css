@@ -1,0 +1,180 @@
+/* ============================================================
+   Anchor plugin (editing view only)
+   These styles apply inside the editor; the produced data HTML
+   carries only id/tabindex, no ck-anchor-* classes.
+   ============================================================ */
+
+/*
+ * Inline anchor on text (method 2).
+ *
+ * The anchor is marked ONLY by an anchor icon (a glyph that cannot be confused
+ * with real content formatting), rendered as a UIElement (ck-anchor-icon)
+ * inserted immediately before the leading span of each anchor via a view
+ * post-fixer in anchorediting.js. The UIElement approach avoids the double-icon
+ * problem that occurs when CKEditor splits the AttributeElement at the caret.
+ *
+ * We intentionally do NOT use underline / background / border on the text:
+ * those are real, author-applicable styles, so using them as an editing-only
+ * marker would mislead the author into thinking the text was actually styled.
+ * The .ck-anchor span itself therefore carries no visual style.
+ */
+
+/* Anchor icons injected as UIElements: one before the first span (start) and
+   one after the last span (end) of each anchor. */
+.ck-editor__editable .ck-anchor-icon {
+    display: inline-block;
+    font-size: 0.7em;
+    line-height: 1;
+    vertical-align: super;
+    opacity: 0.6;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The end icon is mirrored so the start/end pair reads as opening/closing. */
+.ck-editor__editable .ck-anchor-icon-end {
+    transform: scaleX(-1);
+}
+
+/*
+ * Wrapper anchors (methods 4/5/6).
+ *
+ * Same principle as inline anchors: no outline/background on the wrapped
+ * content itself (those read as real styling). The only marker is a small
+ * anchor badge floated at the top-left corner - an out-of-flow editing label,
+ * not content styling, so it cannot be mistaken for an applied design.
+ */
+.ck-editor__editable .ck-anchor-block,
+.ck-editor__editable .ck-anchor-inline {
+    position: relative;
+}
+
+.ck-editor__editable .ck-anchor-block::before,
+.ck-editor__editable .ck-anchor-inline::before {
+    content: '\2693';
+    position: absolute;
+    top: -0.6em;
+    left: -0.2em;
+    font-size: 0.75em;
+    line-height: 1;
+    padding: 1px 3px;
+    border-radius: 3px;
+    background: var(--ck-color-focus-border, #1a73e8);
+    color: #fff;
+    opacity: 0.85;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* ============================================================
+   Anchor form (overlay), mirrors the grid-layout form styling.
+   ============================================================ */
+.ck-anchor-form-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.ck-anchor-form-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.ck-anchor-form {
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    width: 360px;
+    max-width: calc(100vw - 32px);
+    font-size: 13px;
+}
+
+.ck-anchor-form-title {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.ck-anchor-form-help {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.ck-anchor-form-label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.ck-anchor-form-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.ck-anchor-form-input:focus {
+    outline: none;
+    border-color: var(--ck-color-focus-border, #1a73e8);
+}
+
+.ck-anchor-form-error {
+    color: #c0392b;
+    margin-top: 6px;
+    min-height: 1.2em;
+}
+
+.ck-anchor-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.ck-anchor-form-btn {
+    padding: 7px 16px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* Remove sits on the left; Cancel/Update stay grouped on the right. */
+.ck-anchor-form-btn-remove {
+    margin-right: auto;
+    background: #fff;
+    border-color: #d9534f;
+    color: #c0392b;
+}
+
+.ck-anchor-form-btn-remove:hover {
+    background: #fdecea;
+}
+
+.ck-anchor-form-btn-cancel {
+    background: #f1f1f1;
+    border-color: #ccc;
+}
+
+.ck-anchor-form-btn-submit {
+    background: var(--ck-color-focus-border, #1a73e8);
+    color: #fff;
+}
+
+.ck-anchor-form-btn-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

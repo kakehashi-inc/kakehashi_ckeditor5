@@ -1,0 +1,14 @@
+{
+    "Anchor": "Anchor",
+    "Anchor name": "Nama anchor",
+    "Insert": "Sisipkan",
+    "Update": "Perbarui",
+    "Cancel": "Batal",
+    "Edit anchor": "Edit",
+    "Remove anchor": "Hapus",
+    "Anchor help text": "Atur target tautan dalam halaman (#id). Memilih teks akan menambahkan id ke teks tersebut; memilih judul atau paragraf akan menambahkan id ke elemen tersebut.",
+    "ID is required": "ID wajib diisi",
+    "ID must not contain spaces": "ID tidak boleh mengandung spasi",
+    "Invalid ID format": "Format ID tidak valid (huruf, angka, tanda hubung, garis bawah; tidak boleh diawali angka)",
+    "This ID is already used in the document": "ID ini sudah digunakan dalam dokumen"
+}

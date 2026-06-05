@@ -2,7 +2,7 @@
   "name": "kakehashi_ckeditor5",
   "author": "CKSource",
   "description": "A custom CKEditor 5 build made by the CKEditor 5 online builder.",
-  "version": "48.0.0-r1",
+  "version": "48.2.0-r1",
   "license": "GPL-2.0+",
   "private": true,
   "main": "./build/ckeditor.js",

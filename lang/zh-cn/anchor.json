@@ -1,0 +1,14 @@
+{
+    "Anchor": "锚点",
+    "Anchor name": "锚点名称",
+    "Insert": "插入",
+    "Update": "更新",
+    "Cancel": "取消",
+    "Edit anchor": "编辑",
+    "Remove anchor": "删除",
+    "Anchor help text": "设置页内链接目标（#id）。选中文本会将该 id 添加到所选文本；选中标题或段落则会将该 id 添加到该元素。",
+    "ID is required": "ID 为必填项",
+    "ID must not contain spaces": "ID 不能包含空格",
+    "Invalid ID format": "ID 格式无效（仅限字母、数字、连字符、下划线；不能以数字开头）",
+    "This ID is already used in the document": "该 ID 已在文档中使用"
+}

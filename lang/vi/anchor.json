@@ -1,0 +1,14 @@
+{
+    "Anchor": "Neo",
+    "Anchor name": "Tên neo",
+    "Insert": "Chèn",
+    "Update": "Cập nhật",
+    "Cancel": "Hủy",
+    "Edit anchor": "Chỉnh sửa",
+    "Remove anchor": "Xóa",
+    "Anchor help text": "Đặt đích liên kết trong trang (#id). Chọn văn bản sẽ thêm id vào văn bản đó; chọn tiêu đề hoặc đoạn văn sẽ thêm id vào phần tử đó.",
+    "ID is required": "ID là bắt buộc",
+    "ID must not contain spaces": "ID không được chứa khoảng trắng",
+    "Invalid ID format": "Định dạng ID không hợp lệ (chữ cái, chữ số, dấu gạch ngang, dấu gạch dưới; không được bắt đầu bằng chữ số)",
+    "This ID is already used in the document": "ID này đã được sử dụng trong tài liệu"
+}

@@ -1,0 +1,14 @@
+{
+    "Anchor": "アンカー",
+    "Anchor name": "アンカー名",
+    "Insert": "挿入",
+    "Update": "更新",
+    "Cancel": "キャンセル",
+    "Edit anchor": "編集",
+    "Remove anchor": "削除",
+    "Anchor help text": "ページ内リンクの飛び先（#id）を設定します。テキストを選択するとそのテキストに、見出しや段落を選択するとその要素にIDを付与します。",
+    "ID is required": "IDは必須です",
+    "ID must not contain spaces": "IDに空白は使えません",
+    "Invalid ID format": "IDの形式が不正です（英字・数字・ハイフン・アンダースコア。先頭は英字またはアンダースコア）",
+    "This ID is already used in the document": "このIDは既に使用されています"
+}

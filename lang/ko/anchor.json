@@ -1,0 +1,14 @@
+{
+    "Anchor": "앵커",
+    "Anchor name": "앵커 이름",
+    "Insert": "삽입",
+    "Update": "업데이트",
+    "Cancel": "취소",
+    "Edit anchor": "편집",
+    "Remove anchor": "삭제",
+    "Anchor help text": "페이지 내 링크 대상(#id)을 설정합니다. 텍스트를 선택하면 해당 텍스트에 id가 추가되고, 제목이나 단락을 선택하면 해당 요소에 id가 추가됩니다.",
+    "ID is required": "ID는 필수입니다",
+    "ID must not contain spaces": "ID에는 공백을 사용할 수 없습니다",
+    "Invalid ID format": "ID 형식이 올바르지 않습니다(영문자, 숫자, 하이픈, 밑줄만 사용 가능하며 숫자로 시작할 수 없습니다)",
+    "This ID is already used in the document": "이 ID는 이미 문서에서 사용 중입니다"
+}

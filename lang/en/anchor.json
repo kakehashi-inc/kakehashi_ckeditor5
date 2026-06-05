@@ -1,0 +1,14 @@
+{
+    "Anchor": "Anchor",
+    "Anchor name": "Anchor name",
+    "Insert": "Insert",
+    "Update": "Update",
+    "Cancel": "Cancel",
+    "Edit anchor": "Edit",
+    "Remove anchor": "Remove",
+    "Anchor help text": "Set an in-page link target (#id). Selecting text adds the id to that text; selecting a heading or paragraph adds the id to that element.",
+    "ID is required": "ID is required",
+    "ID must not contain spaces": "ID must not contain spaces",
+    "Invalid ID format": "Invalid ID format (letters, digits, hyphen, underscore; must not start with a digit)",
+    "This ID is already used in the document": "This ID is already used in the document"
+}

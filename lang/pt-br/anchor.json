@@ -1,0 +1,14 @@
+{
+    "Anchor": "Âncora",
+    "Anchor name": "Nome da âncora",
+    "Insert": "Inserir",
+    "Update": "Atualizar",
+    "Cancel": "Cancelar",
+    "Edit anchor": "Editar",
+    "Remove anchor": "Remover",
+    "Anchor help text": "Define um destino de link na página (#id). Selecionar um texto adiciona o id a esse texto; selecionar um título ou parágrafo adiciona o id a esse elemento.",
+    "ID is required": "O ID é obrigatório",
+    "ID must not contain spaces": "O ID não pode conter espaços",
+    "Invalid ID format": "Formato de ID inválido (letras, dígitos, hífen, sublinhado; não pode começar com um dígito)",
+    "This ID is already used in the document": "Este ID já está sendo usado no documento"
+}
