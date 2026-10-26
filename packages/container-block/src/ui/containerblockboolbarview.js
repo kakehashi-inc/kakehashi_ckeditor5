@@ -102,7 +102,7 @@ export default class ContainerBlockToolbarView extends View {
     }
 
     _createWidthButtons() {
-        return PRESET_WIDTHS.map((preset, index) => {
+        return PRESET_WIDTHS.map(preset => {
             const button = new ButtonView(this.locale);
 
             button.set({
@@ -122,7 +122,7 @@ export default class ContainerBlockToolbarView extends View {
     }
 
     _createAlignmentButtons() {
-        return ALIGNMENTS.map((align, index) => {
+        return ALIGNMENTS.map(align => {
             const button = new ButtonView(this.locale);
 
             button.set({

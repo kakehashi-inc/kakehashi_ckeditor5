@@ -1,5 +1,5 @@
 import View from '@ckeditor/ckeditor5-ui/src/view';
-import { jscolor } from './jscolor';
+import { jscolor as JsColor } from './jscolor';
 
 const JsColorOptions = {
     hash: true,
@@ -59,11 +59,11 @@ export default class ColorInputView extends View {
         });
 
         this.on('change:parent', (evt, name, value) => {
-            let options = Object.assign({}, JsColorOptions, {
+            const options = Object.assign({}, JsColorOptions, {
                 closeText: this.closeButtonLabel,
                 container: value,
             });
-            this.colorPicker = new jscolor(this.element, options);
+            this.colorPicker = new JsColor(this.element, options);
             this.setInputValue(this.value);
         });
     }

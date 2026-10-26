@@ -28,7 +28,6 @@ export default class FontColorUI extends Plugin {
 
     init() {
         const editor = this.editor;
-        const t = editor.t;
         const fontColorCommand = editor.commands.get(this.commandName);
         const columns = editor.config.get(this.componentName).columns;
         const themeColors = editor.config.get(this.componentName).themeColors.map(removeWhitespaceFromColor);

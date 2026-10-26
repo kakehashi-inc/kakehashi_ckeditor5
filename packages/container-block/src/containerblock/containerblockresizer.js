@@ -1,5 +1,4 @@
 import { Plugin } from 'ckeditor5';
-import { CONTAINER_BLOCK } from './constants';
 
 export default class ContainerBlockResizer extends Plugin {
     static get pluginName() {

@@ -42,15 +42,17 @@ export default class ContainerBlockEditing extends Plugin {
                 const widthMatch = styleAttr.match(/width:\s*(\d+)%/);
                 const width = widthMatch ? parseInt(widthMatch[1]) : 100;
 
-                const marginLeft = styleAttr.includes('margin-left: 0')
-                    ? 'left'
-                    : styleAttr.includes('margin-right: 0')
-                      ? 'right'
-                      : 'center';
+                let alignment = 'center';
+
+                if (styleAttr.includes('margin-left: 0')) {
+                    alignment = 'left';
+                } else if (styleAttr.includes('margin-right: 0')) {
+                    alignment = 'right';
+                }
 
                 return writer.createElement('containerBlock', {
                     width,
-                    alignment: marginLeft,
+                    alignment,
                 });
             },
         });

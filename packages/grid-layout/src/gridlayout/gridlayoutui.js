@@ -179,7 +179,6 @@ export default class GridLayoutUI extends Plugin {
 
     _updateToolbarInfo() {
         const command = this.editor.commands.get(GRID_LAYOUT);
-        const t = key => this._i18n.t(key);
 
         if (command.value) {
             const { templateSize, gutter } = command.value;

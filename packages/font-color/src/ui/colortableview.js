@@ -63,7 +63,7 @@ export default class ColorTableView extends View {
     }
 
     updateSelectedColors() {
-        let selectedColor = this._getActualSelectedColor();
+        const selectedColor = this._getActualSelectedColor();
         if (this.themeColorsGrid) {
             this.themeColorsGrid.selectedColor = selectedColor;
         }
@@ -143,7 +143,7 @@ export default class ColorTableView extends View {
     _createColorInputView(closeButtonLabel) {
         const colorInputView = new ColorInputView(this.locale, closeButtonLabel);
         colorInputView.on('blur', () => {
-            let value = colorInputView.getInputValue();
+            const value = colorInputView.getInputValue();
             this.fire('execute', { value });
         });
         return colorInputView;

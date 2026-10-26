@@ -42,16 +42,15 @@ function renderDowncastElement(themeColors) {
     return (modelAttributeValue, conversionApi) => {
         const { writer } = conversionApi;
         const themeColor = themeColors.find(item => item.paletteKey === modelAttributeValue);
-        const attributes = themeColor
-            ? {
-                  [THEME_COLOR_ATTRIBUTE]: themeColor.paletteKey,
-                  style: `color:${themeColor.color}`,
-              }
-            : modelAttributeValue
-              ? {
-                    style: `color:${modelAttributeValue}`,
-                }
-              : {};
+        const attributes = {};
+
+        if (themeColor) {
+            attributes[THEME_COLOR_ATTRIBUTE] = themeColor.paletteKey;
+            attributes.style = `color:${themeColor.color}`;
+        } else if (modelAttributeValue) {
+            attributes.style = `color:${modelAttributeValue}`;
+        }
+
         return writer.createAttributeElement('span', attributes, {
             priority: 7,
         });

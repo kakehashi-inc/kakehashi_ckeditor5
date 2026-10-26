@@ -94,7 +94,7 @@ export default class ContainerBlockUI extends Plugin {
         const viewDocument = editor.editing.view.document;
 
         // Show toolbar when clicking on container block
-        this.listenTo(viewDocument, 'click', (evt, data) => {
+        this.listenTo(viewDocument, 'click', () => {
             const containerElement = this._getSelectedContainerElement();
 
             if (containerElement) {
@@ -160,7 +160,6 @@ export default class ContainerBlockUI extends Plugin {
     _getBalloonPositionData() {
         const editor = this.editor;
         const view = editor.editing.view;
-        const viewDocument = view.document;
         const containerElement = this._getSelectedContainerElement();
 
         return {

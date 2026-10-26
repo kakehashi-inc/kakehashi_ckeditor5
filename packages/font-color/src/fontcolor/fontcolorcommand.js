@@ -2,10 +2,6 @@ import Command from '@ckeditor/ckeditor5-core/src/command';
 import { FONT_COLOR } from './constants';
 
 export default class FontColorCommand extends Command {
-    constructor(editor) {
-        super(editor);
-    }
-
     refresh() {
         const model = this.editor.model;
         const doc = model.document;
