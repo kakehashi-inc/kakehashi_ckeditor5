@@ -2,7 +2,7 @@
   "name": "kakehashi_ckeditor5",
   "author": "CKSource",
   "description": "A custom CKEditor 5 build made by the CKEditor 5 online builder.",
-  "version": "48.2.0-r1",
+  "version": "49.0.0-r1",
   "license": "GPL-2.0+",
   "private": true,
   "main": "./build/ckeditor.js",
@@ -24,29 +24,29 @@
     "eslint:fix": "eslint packages --fix"
   },
   "devDependencies": {
-    "css-loader": "^7.1.4",
-    "eslint": "^9.39.4",
-    "eslint-config-ckeditor5": "^15.1.0",
+    "css-loader": "^7.1.5",
+    "eslint": "^9.39.5",
+    "eslint-config-ckeditor5": "^17.1.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^5.5.6",
+    "eslint-plugin-prettier": "^5.5.7",
     "eslint-plugin-standard": "^5.0.0",
-    "postcss": "^8.5.15",
+    "postcss": "^8.5.31",
     "postcss-loader": "^8.2.1",
-    "postcss-preset-env": "^11.3.0",
-    "prettier": "^3.8.3",
+    "postcss-preset-env": "^11.6.1",
+    "prettier": "^3.9.10",
     "prettier-eslint": "^16.4.2",
     "prettier-eslint-cli": "^8.0.1",
     "raw-loader": "^4.0.2",
     "style-loader": "^4.0.0",
     "terser-webpack-plugin": "^5.6.1",
     "typescript": "^5.9.3",
-    "webpack": "^5.107.2",
-    "webpack-cli": "^7.0.3"
+    "webpack": "^5.112.2",
+    "webpack-cli": "^7.2.3"
   },
   "dependencies": {
-    "ckeditor5": "^48.2.0",
-    "i18next": "^26.3.1"
+    "ckeditor5": "^49.0.0",
+    "i18next": "^26.5.10"
   }
 }
